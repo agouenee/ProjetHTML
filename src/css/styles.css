@@ -11,6 +11,9 @@ body {
 .clear {
   clear: both;
 }
+strong {
+  font-weight: 700;
+}
 header {
   background-color: #FFF;
 }
@@ -47,4 +50,122 @@ header #menu li a {
   text-decoration: none;
   padding: 15px 35px;
   border-right: solid #efeeef 1px;
+}
+aside {
+  font-family: 'Droid sans', Arial, sans-serif;
+  color: #656464;
+  font-size: 13px;
+  line-height: 18px;
+  width: 245px;
+  float: right;
+  /*position: relative;
+  	left: 0;
+  	top: 40px;*/
+
+  margin: 25px 0;
+}
+aside div {
+  margin-bottom: 10px;
+}
+aside form {
+  margin-bottom: 10px;
+}
+aside form .bar {
+  /*border-right: 1px solid white;*/
+
+  border-left: 1px solid #67b013;
+  border-top: 1px solid #67b013;
+  border-bottom: 1px solid #67b013;
+  width: 211px;
+  height: 20px;
+}
+aside form button {
+  /* A REPRENDRE (bug sous IE et FF) */
+
+  border: 0;
+  background: transparent;
+  float: right;
+  position: relative;
+  left: 8px;
+  bottom: 27px;
+}
+aside #citation {
+  background: white;
+  height: 100px;
+}
+aside #citation #quote-left,
+aside #citation #quote-right {
+  font-size: 72px;
+}
+aside #citation #quote-left {
+  position: relative;
+  left: 15px;
+  top: 20px;
+}
+aside #citation #quote-right {
+  float: right;
+  position: relative;
+  right: 15px;
+  bottom: 25px;
+}
+aside #citation div {
+  width: 130px;
+  position: relative;
+  left: 60px;
+  top: 0px;
+}
+aside #citation div .green {
+  text-align: right;
+  padding-top: 3px;
+}
+aside #newsletter {
+  background: white;
+  height: 75px;
+}
+aside #newsletter h3 {
+  font-weight: 700;
+  padding: 15px 15px 3px 15px;
+}
+aside #newsletter form {
+  padding: 0 15px 15px 15px;
+}
+section {
+  font-family: 'Droid sans', Arial, sans-serif;
+  color: #656464;
+  font-size: 13px;
+  line-height: 18px;
+  background: white;
+  margin: 25px 0;
+}
+section h2 {
+  padding: 20px 20px 0 20px;
+}
+section article {
+  padding: 20px;
+}
+section article img {
+  float: left;
+  padding-right: 15px;
+}
+section article h3 {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+#about {
+  width: 620px;
+  height: 220px;
+  /*position: relative;
+	left: 0;
+	top: 40px;*/
+
+}
+#last-articles article {
+  width: 400px;
+}
+#last-articles div {
+  float: right;
+  position: relative;
+  left: 0;
+  bottom: 280px;
 }
