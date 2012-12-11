@@ -1,3 +1,4 @@
+/* ---- ELEMENTS GENERAUX ---- */
 html {
   background: url("../images/background.png") repeat;
 }
@@ -11,6 +12,7 @@ body {
 .clear {
   clear: both;
 }
+/* ---- HOME ---- */
 header {
   background-color: #FFF;
 }
@@ -47,4 +49,9 @@ header #menu li a {
   text-decoration: none;
   padding: 15px 35px;
   border-right: solid #efeeef 1px;
+}
+header #menu li a:hover,
+header #menu li a.active {
+  border-top: solid #67b013 3px;
+  padding-top: 12px;
 }
