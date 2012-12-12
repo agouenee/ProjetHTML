@@ -93,24 +93,22 @@ section {
 		color: @grey;
 		font-size: 13px;
 		line-height: 18px;
-		background: white;
-		margin: 25px 0;
-		&.about {
-			width: 620px;
+		width: 900px;
+		margin: auto;
+		.about {
+			width: 625px;
 			height: 220px;
-			/*position: relative;
-			left: 0;
-			top: 40px;*/
+			background: white;
+			margin: 25px 0;
 		}
-		&.last-articles {
+		.last-articles {
+			background: white;
+			margin: 25px auto;
 			article {
 				width: 400px;
 			}
 			div {
 				float: right;
-				position: relative;
-				left: 0;
-				bottom: 280px;
 			}
 		}
 		h2 {
@@ -126,6 +124,72 @@ section {
 				padding-bottom: 10px;
 				font-weight: bold;
 				font-size: 14px;
+			}
+		}
+		aside {
+			width: 245px;
+			float: right;
+			div {
+			  	margin-bottom: 10px;
+			}
+			form {
+				margin-bottom: 10px;
+				.bar {
+					border-left: 1px solid @green;
+					border-top: 1px solid @green;
+					border-bottom: 1px solid @green;
+					width: 211px;
+					height: 20px;
+				}
+				button { /* A REPRENDRE (bug sous IE et FF) */
+					border: 0;
+					background: transparent;
+					float: right;
+					position: relative;
+					left: 8px;
+					bottom: 27px;
+				}
+			}
+			#citation {
+				background: white;
+				height: 100px;
+				/*#quote-left, #quote-right {
+					 font-size: 72px;
+				}*/
+				#quote-left {
+					font-size: 72px;
+					position: relative;
+					left: 15px;
+					top: 20px;
+				}
+				#quote-right {
+					font-size: 72px;
+					float: right;
+					position: relative;
+					right: 15px;
+					bottom: 25px;
+				}
+				div {
+					width: 130px;
+					position: relative;
+					left: 60px;
+					top: 0px;
+					.green {
+					  	text-align: right;
+					 	padding-top: 3px;
+					}
+				}
+			}
+			#newsletter {
+				background: white;
+				height: 75px;
+				h3 {
+					font-weight: 700;
+					padding: 15px 15px 3px 15px;
+				}
+				form {
+					padding: 0 15px 15px 15px;
+				}
 			}
 		}
 	}
@@ -184,78 +248,4 @@ footer {
 			}
 		}
 	}
-}
-
-aside {
-	.droid;
-	color: @grey;
-	font-size: 13px;
-	line-height: 18px;
-	width: 245px;
-	float: right;
-  	/*position: relative;
-  	left: 0;
-  	top: 40px;*/
-  	margin: 25px 0;
-  	div {
-  		margin-bottom: 10px;
-  	}
-  	form {
-  		margin-bottom: 10px;
-  		.bar {
-  			/*border-right: 1px solid white;*/
-  			border-left: 1px solid @green;
-  			border-top: 1px solid @green;
-  			border-bottom: 1px solid @green;
-  			width: 211px;
-  			height: 20px;
-  		}
-  		button { /* A REPRENDRE (bug sous IE et FF) */
-  			border: 0;
-  			background: transparent;
-  			float: right;
-  			position: relative;
-  			left: 8px;
-  			bottom: 27px;
-  		}
-  	}
-  	#citation {
-  		background: white;
-  		height: 100px;
-  		#quote-left, #quote-right {
-  			font-size: 72px;
-  		}
-  		#quote-left {
-  			position: relative;
-  			left: 15px;
-  			top: 20px;
-  		}
-  		#quote-right {
-  			float: right;
-  			position: relative;
-  			right: 15px;
-  			bottom: 25px;
-  		}
-  		div {
-  			width: 130px;
-  			position: relative;
-  			left: 60px;
-  			top: 0px;
-  			.green {
-  				text-align: right;
-  				padding-top: 3px;
-  			}
-  		}
-  	}
-  	#newsletter {
-  		background: white;
-  		height: 75px;
-  		h3 {
-  			font-weight: 700;
-  			padding: 15px 15px 3px 15px;
-  		}
-  		form {
-  			padding: 0 15px 15px 15px;
-  		}
-  	}
 }
