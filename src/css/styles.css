@@ -15,13 +15,10 @@ body {
 .clear {
   clear: both;
 }
-<<<<<<< HEAD
 strong {
   font-weight: 700;
 }
-=======
 /* ---- HEADER ---- */
->>>>>>> e8caee0fd8ce11d4527e0506dcad9aef031f49b4
 header {
   width: 900px;
   margin: auto;
@@ -60,7 +57,116 @@ header #menu li a {
   padding: 15px 35px;
   border-right: solid #efeeef 1px;
 }
-<<<<<<< HEAD
+header #menu li a:hover,
+header #menu li a.active {
+  border-top: solid #67b013 3px;
+  padding-top: 12px;
+}
+/* ---- SECTION ---- */
+section.slider {
+  width: 900px;
+  margin: auto;
+}
+section.slider .bx-viewport {
+  border: none;
+  box-shadow: none;
+  left: 0px;
+  margin-top: 40px;
+}
+section.content {
+  font-family: 'Droid sans', Arial, sans-serif;
+  color: #656464;
+  font-size: 13px;
+  line-height: 18px;
+  background: white;
+  margin: 25px 0;
+}
+section.content.about {
+  width: 620px;
+  height: 220px;
+  /*position: relative;
+			left: 0;
+			top: 40px;*/
+
+}
+section.content.last-articles article {
+  width: 400px;
+}
+section.content.last-articles div {
+  float: right;
+  position: relative;
+  left: 0;
+  bottom: 280px;
+}
+section.content h2 {
+  padding: 20px 20px 0 20px;
+}
+section.content article {
+  padding: 20px;
+}
+section.content article img {
+  float: left;
+  padding-right: 15px;
+}
+section.content article h3 {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* ---- FOOTER ---- */
+footer {
+  background-color: #292929;
+}
+footer #footer {
+  width: 900px;
+  margin: auto;
+  padding-top: 30px;
+  color: #a9a9a9;
+  font-size: 14px;
+  font-family: 'ColaborateLight', Arial, sans-serif;
+}
+footer #footer #categories {
+  float: left;
+  margin-right: 50px;
+}
+footer #footer #contact {
+  float: left;
+}
+footer #footer h6 {
+  font-family: 'Droid sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+}
+footer #footer a {
+  color: #a9a9a9;
+  text-decoration: underline;
+}
+footer #footer #twitter {
+  width: 440px;
+  float: left;
+  margin-left: 150px;
+}
+footer #footer #twitter img {
+  float: left;
+}
+footer #footer #twitter div {
+  width: 150px;
+  float: left;
+  margin-left: 30px;
+}
+footer #footer #twitter div p {
+  padding-top: 10px;
+}
+footer #footer #twitter div a {
+  color: #67b013;
+  text-decoration: none;
+}
+footer #footer .credits {
+  padding: 45px 0px 20px 0px;
+}
+footer #footer .credits p {
+  text-align: center;
+}
 aside {
   font-family: 'Droid sans', Arial, sans-serif;
   color: #656464;
@@ -138,115 +244,4 @@ aside #newsletter h3 {
 }
 aside #newsletter form {
   padding: 0 15px 15px 15px;
-}
-section {
-  font-family: 'Droid sans', Arial, sans-serif;
-  color: #656464;
-  font-size: 13px;
-  line-height: 18px;
-  background: white;
-  margin: 25px 0;
-}
-section h2 {
-  padding: 20px 20px 0 20px;
-}
-section article {
-  padding: 20px;
-}
-section article img {
-  float: left;
-  padding-right: 15px;
-}
-section article h3 {
-  padding-bottom: 10px;
-  font-weight: bold;
-  font-size: 14px;
-}
-#about {
-  width: 620px;
-  height: 220px;
-  /*position: relative;
-	left: 0;
-	top: 40px;*/
-
-}
-#last-articles article {
-  width: 400px;
-}
-#last-articles div {
-  float: right;
-  position: relative;
-  left: 0;
-  bottom: 280px;
-=======
-header #menu li a:hover,
-header #menu li a.active {
-  border-top: solid #67b013 3px;
-  padding-top: 12px;
-}
-/* ---- SECTION ---- */
-section {
-  width: 900px;
-  margin: auto;
-}
-section .slider .bx-viewport {
-  border: none;
-  box-shadow: none;
-  left: 0px;
-  margin-top: 40px;
-}
-/* ---- FOOTER ---- */
-footer {
-  background-color: #292929;
-}
-footer #footer {
-  width: 900px;
-  margin: auto;
-  padding-top: 30px;
-  color: #a9a9a9;
-  font-size: 14px;
-  font-family: 'ColaborateLight', Arial, sans-serif;
-}
-footer #footer #categories {
-  float: left;
-  margin-right: 50px;
-}
-footer #footer #contact {
-  float: left;
-}
-footer #footer h6 {
-  font-family: 'Droid sans', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-}
-footer #footer a {
-  color: #a9a9a9;
-  text-decoration: underline;
-}
-footer #footer #twitter {
-  width: 440px;
-  float: left;
-  margin-left: 150px;
-}
-footer #footer #twitter img {
-  float: left;
-}
-footer #footer #twitter div {
-  width: 150px;
-  float: left;
-  margin-left: 30px;
-}
-footer #footer #twitter div p {
-  padding-top: 10px;
-}
-footer #footer #twitter div a {
-  color: #67b013;
-  text-decoration: none;
-}
-footer #footer .credits {
-  padding: 45px 0px 20px 0px;
-}
-footer #footer .credits p {
-  text-align: center;
->>>>>>> e8caee0fd8ce11d4527e0506dcad9aef031f49b4
 }
