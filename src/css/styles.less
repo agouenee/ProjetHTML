@@ -1,15 +1,27 @@
 .droid () {
 	font-family: 'Droid sans', Arial, sans-serif;
 }
+.colaborate () {
+	font-family: 'ColaborateLight', Arial, sans-serif;
+}
 @grey: #656464;
 @green: #67b013;
 
-html {
-	background: url("../images/background.png") repeat;
+@font-face {
+	font-family: 'ColaborateLight';
+	src: url('../fonts/Colaborate/colablig-webfont.eot');
+	src: url('../fonts/Colaborate/colablig-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Colaborate/colablig-webfont.woff') format('woff'),
+	url('../fonts/Colaborate/colablig-webfont.ttf') format('truetype'),
+	url('../fonts/Colaborate/colablig-webfont.svg#ColaborateLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+
+
+/* ---- ELEMENTS GENERAUX ---- */
 body {
-	width: 900px;
-	margin: auto;
+	background: url("../images/background.png") repeat;
 }
 .green {
 	color: @green;
@@ -17,10 +29,17 @@ body {
 .clear {
 	clear: both;
 }
+<<<<<<< HEAD
 strong {
 	font-weight: 700;
 }
+=======
+
+/* ---- HEADER ---- */
+>>>>>>> e8caee0fd8ce11d4527e0506dcad9aef031f49b4
 header {
+	width: 900px;
+	margin: auto;
 	background-color: #FFF;
 	#title {
 		padding: 14px 0px 14px 25px;
@@ -39,7 +58,6 @@ header {
 	}
 	#menu {
 		.droid;
-		clear: both;
 		font-size: 17px;
 		text-transform: uppercase;
 		border-top: solid #efeeef 1px;
@@ -53,6 +71,78 @@ header {
 				text-decoration: none;
 				padding: 15px 35px;
 				border-right: solid #efeeef 1px;
+				&:hover, &.active {
+					border-top: solid @green 3px;
+					padding-top: 12px;
+				}
+			}
+		}
+	}
+}
+/* ---- SECTION ---- */
+section {
+	width: 900px;
+	margin: auto;
+	.slider {
+		.bx-viewport {
+			border: none;
+			box-shadow: none;
+			left: 0px;
+			margin-top: 40px;
+		}
+	}
+}
+
+/* ---- FOOTER ---- */
+footer {
+	background-color: #292929;
+	#footer {
+		width: 900px;
+		margin: auto;
+		padding-top: 30px;
+		color: #a9a9a9;
+		font-size: 14px;
+		.colaborate;
+		#categories {
+			float: left;
+			margin-right: 50px;
+		}
+		#contact {
+			float: left;
+		}
+		h6 {
+			.droid;
+			font-weight: 700;
+			font-size: 13px;
+		}
+		a {
+			color: #a9a9a9;
+			text-decoration: underline;
+		}
+		#twitter {
+			width: 440px;
+			float: left;
+			margin-left: 150px;
+			img {
+				float: left;
+			}
+			div {
+				width: 150px;
+				float: left;
+				margin-left: 30px;
+				p {
+					padding-top: 10px;
+				}
+				a {
+					color: @green;
+					text-decoration: none;
+				}
+			}
+		}
+		.credits {
+			padding: 45px 0px 20px 0px;
+			p {
+				text-align: center;
 			}
 		}
 	}
