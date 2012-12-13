@@ -15,6 +15,9 @@ body {
 .clear {
   clear: both;
 }
+.hidden {
+  display: none;
+}
 strong {
   font-weight: 700;
 }
@@ -142,10 +145,6 @@ section.content aside form button {
 section.content aside #citation {
   background: white;
   height: 100px;
-  /*#quote-left, #quote-right {
-					 font-size: 72px;
-				}*/
-
 }
 section.content aside #citation #quote-left {
   font-size: 72px;
@@ -160,13 +159,14 @@ section.content aside #citation #quote-right {
   right: 15px;
   bottom: 25px;
 }
-section.content aside #citation div {
+section.content aside #citation #citation-content div {
   width: 130px;
+  height: 50px;
   position: relative;
   left: 60px;
   top: 0px;
 }
-section.content aside #citation div .green {
+section.content aside #citation #citation-content div .green {
   text-align: right;
   padding-top: 3px;
 }
