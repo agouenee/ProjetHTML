@@ -132,15 +132,15 @@ section.content aside form .bar {
   width: 211px;
   height: 20px;
 }
-section.content aside form button {
-  /* A REPRENDRE (bug sous IE et FF) */
-
+section.content aside form input[type="submit"] {
   border: 0;
-  background: transparent;
+  background: url("../images/search-button.png");
+  width: 33px;
+  height: 24px;
   float: right;
   position: relative;
-  left: 8px;
-  bottom: 27px;
+  left: 0px;
+  bottom: 24px;
 }
 section.content aside #citation {
   background: white;
@@ -180,6 +180,9 @@ section.content aside #newsletter h3 {
 }
 section.content aside #newsletter form {
   padding: 0 15px 15px 15px;
+}
+section.content aside #newsletter form input[type="submit"] {
+  background: url("../images/ok-button.png");
 }
 /* ---- FOOTER ---- */
 footer {

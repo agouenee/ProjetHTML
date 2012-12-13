@@ -144,13 +144,15 @@ section {
 					width: 211px;
 					height: 20px;
 				}
-				button { /* A REPRENDRE (bug sous IE et FF) */
+				input[type="submit"] {
 					border: 0;
-					background: transparent;
+					background: url("../images/search-button.png");
+					width: 33px;
+					height: 24px;
 					float: right;
 					position: relative;
-					left: 8px;
-					bottom: 27px;
+					left: 0px;
+					bottom: 24px;
 				}
 			}
 			#citation {
@@ -192,6 +194,9 @@ section {
 				}
 				form {
 					padding: 0 15px 15px 15px;
+					input[type="submit"] {
+						background: url("../images/ok-button.png");
+					}
 				}
 			}
 		}
