@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$('.bxslider').bxSlider({
-		pager: false
+		pager: false,
+		auto: true
 	});
 
 	// Twitter - get last tweets
