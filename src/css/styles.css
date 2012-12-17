@@ -129,8 +129,9 @@ section.content aside form .bar {
   border-left: 1px solid #67b013;
   border-top: 1px solid #67b013;
   border-bottom: 1px solid #67b013;
-  width: 211px;
+  width: 203px;
   height: 20px;
+  padding: 1px 5px;
 }
 section.content aside form input[type="submit"] {
   border: 0;
