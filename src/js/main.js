@@ -4,6 +4,25 @@ $(document).ready(function() {
 		auto: true
 	});
 
+	// Citations
+	var citation = $("#citation-content div:first-child");
+	var length = $('#citation-content > div').length;
+	var i = 1;
+	setInterval(function() {
+		citation.fadeOut("slow", function () {
+			citation.addClass("hidden").fadeOut("slow");
+			citation.next().fadeIn("slow").removeClass("hidden");
+			citation = citation.next();
+			i++;
+			if(i > length) {
+				citation = $("#citation-content div:first-child");
+				citation.fadeIn("slow").removeClass("hidden");
+				i = 1;
+			}
+		});
+	}, 15000);
+
+
 	// Twitter - get last tweets
 	function loadLatestTweet() {
 		var numTweets = 1;
@@ -26,7 +45,7 @@ $(document).ready(function() {
 	}
 	loadLatestTweet();
 
-	//Twitter Parsers
+	// Twitter Parsers
 	String.prototype.parseURL = function() {
 		return this.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(url) {
 			return url.link(url);

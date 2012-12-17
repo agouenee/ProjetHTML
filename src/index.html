@@ -43,18 +43,24 @@
 			<!-- Barre de recherche -->
 			<form name="search-form" action="#" method="post">
 				<input type="text" name="search" class="bar" />
-				<!--<input id="search-button" type="image" src="images/search-button.png" alt="submit" name="submit" /> -->
-				<!--<input id="search" type="submit" value="OK" /> -->
-				<button type="submit">
-					<img src="images/search-button.png" alt="submit" />
-				</button>
+				<input type="submit" value="" />
 			</form>
 			<!-- Citations -->
 			<div id="citation">
 				<p id="quote-left">&laquo;</p>
-				<div>
-					<p>Internet Explorer, c'est <strong>CACA</strong>.</p>
-					<p class="green">Katia Moreira</p>
+				<div id="citation-content">
+					<div>
+						<p>Internet Explorer, c'est <strong>CACA</strong>.</p>
+						<p class="green">Katia Moreira</p>
+					</div>
+					<div class="hidden">
+						<p>Les kiwis, c'est la vie : <strong>super kiwi</strong> en force !</p>
+						<p class="green">Un fan de super kiwi</p>
+					</div>
+					<div class="hidden">
+						<p>Ce site n'a rien à voir avec <strong>Alsacréations</strong>.</p>
+						<p class="green">Audrey Guénée</p>
+					</div>
 				</div>
 				<p id="quote-right" class="green">&raquo;</p>
 			</div>
@@ -63,7 +69,7 @@
 				<h3>Inscription à la newsletter</h3>
 				<form name="newsletter-form" action="#" method="post">
 					<input type="text" name="email" class="bar" />
-					<button type="submit"><img src="images/ok-button.png" alt="submit" /></button>
+					<input type="submit" value="" />
 				</form>
 			</div>
 		</aside>

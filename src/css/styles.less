@@ -29,6 +29,9 @@ body {
 .clear {
 	clear: both;
 }
+.hidden {
+	display: none;
+}
 strong {
 	font-weight: 700;
 }
@@ -146,21 +149,20 @@ section {
 					width: 211px;
 					height: 20px;
 				}
-				button { /* A REPRENDRE (bug sous IE et FF) */
+				input[type="submit"] {
 					border: 0;
-					background: transparent;
+					background: url("../images/search-button.png");
+					width: 33px;
+					height: 24px;
 					float: right;
 					position: relative;
-					left: 8px;
-					bottom: 27px;
+					left: 0px;
+					bottom: 24px;
 				}
 			}
 			#citation {
 				background: white;
 				height: 100px;
-				/*#quote-left, #quote-right {
-					 font-size: 72px;
-				}*/
 				#quote-left {
 					font-size: 72px;
 					position: relative;
@@ -174,14 +176,17 @@ section {
 					right: 15px;
 					bottom: 25px;
 				}
-				div {
-					width: 130px;
-					position: relative;
-					left: 60px;
-					top: 0px;
-					.green {
-					  	text-align: right;
-					 	padding-top: 3px;
+				#citation-content {
+					div {
+						width: 130px;
+						height: 50px;
+						position: relative;
+						left: 60px;
+						top: 0px;
+						.green {
+					  		text-align: right;
+					 		padding-top: 3px;
+						}
 					}
 				}
 			}
@@ -194,6 +199,9 @@ section {
 				}
 				form {
 					padding: 0 15px 15px 15px;
+					input[type="submit"] {
+						background: url("../images/ok-button.png");
+					}
 				}
 			}
 		}

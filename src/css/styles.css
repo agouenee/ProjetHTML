@@ -15,6 +15,9 @@ body {
 .clear {
   clear: both;
 }
+.hidden {
+  display: none;
+}
 strong {
   font-weight: 700;
 }
@@ -134,23 +137,19 @@ section.content aside form .bar {
   width: 211px;
   height: 20px;
 }
-section.content aside form button {
-  /* A REPRENDRE (bug sous IE et FF) */
-
+section.content aside form input[type="submit"] {
   border: 0;
-  background: transparent;
+  background: url("../images/search-button.png");
+  width: 33px;
+  height: 24px;
   float: right;
   position: relative;
-  left: 8px;
-  bottom: 27px;
+  left: 0px;
+  bottom: 24px;
 }
 section.content aside #citation {
   background: white;
   height: 100px;
-  /*#quote-left, #quote-right {
-					 font-size: 72px;
-				}*/
-
 }
 section.content aside #citation #quote-left {
   font-size: 72px;
@@ -165,13 +164,14 @@ section.content aside #citation #quote-right {
   right: 15px;
   bottom: 25px;
 }
-section.content aside #citation div {
+section.content aside #citation #citation-content div {
   width: 130px;
+  height: 50px;
   position: relative;
   left: 60px;
   top: 0px;
 }
-section.content aside #citation div .green {
+section.content aside #citation #citation-content div .green {
   text-align: right;
   padding-top: 3px;
 }
@@ -185,6 +185,9 @@ section.content aside #newsletter h3 {
 }
 section.content aside #newsletter form {
   padding: 0 15px 15px 15px;
+}
+section.content aside #newsletter form input[type="submit"] {
+  background: url("../images/ok-button.png");
 }
 /* ---- FOOTER ---- */
 footer {
