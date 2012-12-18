@@ -37,6 +37,8 @@ $(document).ready(function() {
 		});
 	}, 15000);
 
+	// Placeholder attribute (browsers compatibility)
+	$("input[placeholder]").placeholder();
 
 	// Twitter - get last tweets
 	function loadLatestTweet() {
