@@ -58,15 +58,20 @@ header #menu li a {
   color: #656464;
   text-decoration: none;
   text-align: center;
-  padding: 13px 30px;
   border-right: solid #efeeef 1px;
+  height: 43px;
+  overflow: hidden;
 }
 header #menu li a:hover,
 header #menu li a.active {
   border-top: solid #67b013 3px;
-  padding-top: 12px;
+  height: 40px;
 }
-header #menu li a.hover {
+header #menu li a span {
+  display: block;
+  padding: 13px 30px;
+}
+header #menu li a span.hover {
   color: #FFF;
   background-color: #67b013;
 }

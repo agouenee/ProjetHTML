@@ -1,7 +1,22 @@
 $(document).ready(function() {
+	// Slider
 	$('.bxslider').bxSlider({
 		pager: false,
 		auto: true
+	});
+
+	//Menu
+	$("header #menu li>a").live({
+		mouseenter: function() {
+			$(this).find("span.main").animate({
+				'marginTop': '-43px'
+			}, 200);
+		},
+		mouseleave: function() {
+			$(this).find("span.main").stop(true, true).animate({
+				'margin-top': '0px'
+			}, 200);
+		}
 	});
 
 	// Citations

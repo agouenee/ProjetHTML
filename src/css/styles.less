@@ -70,15 +70,21 @@ header {
 				color: @grey;
 				text-decoration: none;
 				text-align: center;
-				padding: 13px 30px;
 				border-right: solid #efeeef 1px;
+				height: 43px;
+				overflow: hidden;
 				&:hover, &.active {
 					border-top: solid @green 3px;
-					padding-top: 12px;
+					height: 40px;
 				}
-				&.hover {
-					color: #FFF;
-					background-color: @green;
+				span {
+					display: block;
+					padding: 13px 30px;
+					&.hover {
+						color: #FFF;
+						background-color: @green;
+						//display: none;
+					}
 				}
 			}
 		}
