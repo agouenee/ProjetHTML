@@ -7,16 +7,19 @@ $(document).ready(function() {
 
 	//Menu
 	$("header #menu li>a").live({
-		mouseenter: function() {
-			$(this).find("span.main").animate({
-				'marginTop': '-43px'
-			}, 200);
-		},
-		mouseleave: function() {
-			$(this).find("span.main").stop(true, true).animate({
-				'margin-top': '0px'
-			}, 200);
-		}
+		
+			mouseenter: function() {
+				if(! $(this).hasClass("active")) {
+					$(this).find("span.main").animate({
+						'marginTop': '-43px'
+					}, 200);
+				}
+			},
+			mouseleave: function() {
+				$(this).find("span.main").stop(true, true).animate({
+					'margin-top': '0px'
+				}, 200);
+			}
 	});
 
 	// Citations

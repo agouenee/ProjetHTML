@@ -90,7 +90,7 @@ header {
 		}
 	}
 }
-/* ---- SECTION ---- */
+/* ---- HOME ---- */
 section {
 	&.slider {
 		width: 900px;
@@ -112,11 +112,11 @@ section {
 		.about {
 			width: 625px;
 			height: 220px;
-			background: white;
+			background-color: #FFF;
 			margin: 25px 0;
 		}
 		.last-articles {
-			background: white;
+			background-color: #FFF;
 			margin: 25px auto;
 			article {
 				width: 400px;
@@ -144,7 +144,7 @@ section {
 			width: 245px;
 			float: right;
 			div {
-			  	margin-bottom: 10px;
+				margin-bottom: 10px;
 			}
 			form {
 				margin-bottom: 10px;
@@ -191,8 +191,8 @@ section {
 						left: 60px;
 						top: 0px;
 						.green {
-					  		text-align: right;
-					 		padding-top: 3px;
+							text-align: right;
+							padding-top: 3px;
 						}
 					}
 				}
@@ -210,6 +210,20 @@ section {
 						background: url("../images/ok-button.png");
 					}
 				}
+			}
+		}
+	}
+}
+/* ---- CATEGORIES ---- */
+section {
+	&.article {
+		width: 625px;
+		height: 220px;
+		margin: 25px 0;
+		background-color: #FFF;
+		article {
+			h3 {
+				font-size: 19px;
 			}
 		}
 	}

@@ -75,7 +75,7 @@ header #menu li a span.hover {
   color: #FFF;
   background-color: #67b013;
 }
-/* ---- SECTION ---- */
+/* ---- HOME ---- */
 section.slider {
   width: 900px;
   margin: auto;
@@ -97,11 +97,11 @@ section.content {
 section.content .about {
   width: 625px;
   height: 220px;
-  background: white;
+  background-color: #FFF;
   margin: 25px 0;
 }
 section.content .last-articles {
-  background: white;
+  background-color: #FFF;
   margin: 25px auto;
 }
 section.content .last-articles article {
@@ -194,6 +194,16 @@ section.content aside #newsletter form {
 }
 section.content aside #newsletter form input[type="submit"] {
   background: url("../images/ok-button.png");
+}
+/* ---- CATEGORIES ---- */
+section.article {
+  width: 625px;
+  height: 220px;
+  margin: 25px 0;
+  background-color: #FFF;
+}
+section.article article h3 {
+  font-size: 19px;
 }
 /* ---- FOOTER ---- */
 footer {
