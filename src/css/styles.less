@@ -140,6 +140,13 @@ section {
 				font-size: 14px;
 			}
 		}
+		
+	}
+}
+
+/* ---- ASIDE ---- */
+section {
+	&.content {
 		aside {
 			width: 245px;
 			float: right;
@@ -156,13 +163,13 @@ section {
 					}
 				}
 				input[type="submit"] {
-					background: url("../images/search-button.png");
-					border: 1px solid @green;
 					width: 33px;
 					height: 24px;
-					cursor: pointer;
 					position: absolute;
 					left: 212px;
+					background: url("../images/search-button.png");
+					border: 1px solid @green;
+					cursor: pointer;
 				}
 			}
 			#citation {
@@ -212,19 +219,20 @@ section {
 						}
 					}
 					input[type="submit"] {
-						background: url("../images/ok-button.png");
-						border: 1px solid @green;
 						width: 33px;
 						height: 24px;
-						cursor: pointer;
 						position: absolute;
-						left: 180px; bottom: 0;
+						left: 180px;
+						background: url("../images/ok-button.png");
+						border: 1px solid @green;
+						cursor: pointer;
 					}
 				}
 			}
 		}
 	}
 }
+
 /* ---- ARTICLES ---- */
 section {
 	&.article {
@@ -262,86 +270,96 @@ section {
 	}
 }
 
-/* ---- FORM ---- */
-.bar {
-	.placeholder {
-		margin-bottom: 15px;
-		position: relative;
-		background: white;
-		input {
-			padding: 1px 5px;
-			border: 1px solid @green;
-			background: transparent;
-			position: relative;
-			left: 0; top: 0;
+/* ---- FORMS ---- */
+section {
+	&#contact-form {
+		display: none;
+		.droid;
+		color: @grey;
+		font-size: 13px;
+		line-height: 18px;
+		width: 600px;
+		h2 {
+			padding: 20px 0 0 150px;
+			font-size: 18px;
+			font-weight: 700;
 		}
-		label {
-			display: block;
-			position: absolute;
-			left: 6px; top: 4px;
-			color: silver;
+		p {
+			padding: 20px 0 10px 150px;
 		}
-	}
-}
-
-#contact-form {
-	display: none;
-	.droid;
-	color: @grey;
-	font-size: 13px;
-	line-height: 18px;
-	width: 600px;
-	h2 {
-		padding: 20px 0 20px 150px;
-	}
-	form {
-		width: 305px;
-		padding: 20px 0;
-		margin: auto;
-		.placeholder {
-			margin-bottom: 15px;
+		form {
 			width: 305px;
-			position: relative;
-			background: white;
-			&.textarea {
-				height: 150px;
-				textarea {
-					.droid;
+			padding: 20px 0 30px 0;
+			margin: auto;
+			.placeholder {
+				margin-bottom: 15px;
+				width: 305px;
+				position: relative;
+				background: white;
+				&.textarea {
+					height: 150px;
+					textarea {
+						.droid;
+						width: 300px;
+						height: 144px;
+						padding: 6px 0 0 5px;
+						border: 1px solid @green;
+					}
+				}
+				input {
 					width: 300px;
-					height: 144px;
-					padding: 6px 0 0 5px;
+					height: 30px;
+					padding: 0 0 0 5px;
 					border: 1px solid @green;
+					background: transparent;
+					position: relative;
+					left: 0; top: 0;
+				}
+				label {
+					display: block;
+					position: absolute;
+					left: 6px; top: 8px;
+					color: @grey;
 				}
 			}
-			input {
-				width: 300px;
+			input[type="submit"], input[type="reset"] {
+				width: 90px;
 				height: 30px;
-				padding: 0 0 0 5px;
+				margin-top: 10px;
+				background: white;
+				color: @green;
 				border: 1px solid @green;
-				background: transparent;
+				cursor: pointer;
+				&:hover {
+					background: @green;
+					color: white;
+				}
+			}
+			input[type="submit"] {
+				margin-left: 10px;
+			}
+		}
+	}
+	aside {
+		.bar {
+			.placeholder {
+				margin-bottom: 15px;
 				position: relative;
-				left: 0; top: 0;
+				background: white;
+				input {
+					padding: 1px 5px;
+					border: 1px solid @green;
+					background: transparent;
+					position: relative;
+					left: 0; top: 0;
+				}
+				label {
+					display: block;
+					position: absolute;
+					left: 6px; top: 4px;
+					color: silver;
+				}
 			}
-			label {
-				display: block;
-				position: absolute;
-				left: 6px; top: 8px;
-				color: @grey;
-			}
-		}
-		input[type="submit"] {
-			width: 90px;
-			background: white;
-			border: 1px solid @green;
-			/*box-shadow: 1px 1px 1px @green;
-			&:hover {
- 				box-shadow:1px 1px 1px @green inset;
-			}*/
-		}
-		input[type="reset"] {
-			width: 90px;
-			background: white;
-			border: 1px solid @green;
 		}
 	}
 }
@@ -400,5 +418,3 @@ footer {
 		}
 	}
 }
-
-
