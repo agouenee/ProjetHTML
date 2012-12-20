@@ -1,0 +1,21 @@
+<section id="contact-form">
+	<h2>Contactez-nous !</h2>
+	<form action="#" method="post" class="form">
+		<p>
+			<input type="text" name="first-name" placeholder="Prénom" />
+		</p>
+		<p>
+			<input type="text" name="name" placeholder="Nom" />
+		</p>
+		<p>
+			<input type="text" name="email" placeholder="E-mail" />
+		</p>
+		<p>
+			<textarea name="message" placeholder="Votre message"></textarea>
+		</p>
+		<p>
+			<input type="reset" value="Effacer" />
+			<input type="submit" value="Envoyer" />
+		</p>
+	</form>
+</section>

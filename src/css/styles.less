@@ -147,24 +147,12 @@ section {
 				margin-bottom: 10px;
 			}
 			form {
-				margin-bottom: 10px;
-				.bar {
-					border-left: 1px solid @green;
-					border-top: 1px solid @green;
-					border-bottom: 1px solid @green;
-					width: 203px;
-					height: 20px;
-					padding: 1px 5px;
-				}
 				input[type="submit"] {
-					border: 0;
-					background: url("../images/search-button.png");
-					width: 33px;
-					height: 24px;
 					float: right;
 					position: relative;
 					left: 0px;
 					bottom: 24px;
+					background: url("../images/search-button.png");
 				}
 			}
 			#citation {
@@ -218,13 +206,100 @@ section {
 section {
 	&.article {
 		width: 625px;
-		height: 220px;
+		height: 241px;
 		margin: 25px 0;
 		background-color: #FFF;
+		position: relative;
 		article {
+			.date {
+				width: 47px;
+				height: 45px;
+				background-color: @green;
+				color: #FFF;
+				text-align: center;
+				padding-top: 5px;
+				position: absolute;
+				top: 8px;
+				left: 0;
+				.day {
+					font-size: 19px;
+				}
+				.month {
+					font-size: 15px;
+				}
+			}
 			h3 {
 				font-size: 19px;
+				padding-left: 35px;
+				margin-bottom: 20px;
 			}
+		}
+	}
+}
+
+/* ---- FORM ---- */
+#contact-form {
+	.droid;
+	color: @grey;
+	font-size: 13px;
+	line-height: 18px;
+	width: 500px;
+	h2 {
+		padding: 20px 0 20px 100px;
+	}
+	form {
+		width: 300px;
+		margin: auto;
+		legend {
+			margin: 10px 0;
+		}
+		input[type="submit"] {
+			width: 90px;
+			background: white;
+			/*box-shadow: 1px 1px 1px @green;
+			&:hover {
+ 				box-shadow:1px 1px 1px @green inset;
+			}*/
+		}
+	}
+}
+
+.form {
+	margin-bottom: 10px;
+	input {
+		border: 1px solid @green;
+		width: 203px;
+		height: 20px;
+		padding: 1px 5px;
+	}
+	input[type="submit"] {
+		border: 1px solid @green;
+		width: 33px;
+		height: 24px;
+		cursor: pointer;
+	}
+	input[type="reset"] {
+		width: 90px;
+		height: 24px;
+		background: white;
+		cursor: pointer;
+	}
+	p {
+	margin: 15px 0;
+		input {
+			width: 250px;
+			height: 25px;
+			padding: 0 5px;
+			border: 1px solid @green;
+		}
+		textarea {
+			.droid;
+			min-width: 252px;
+			max-width: 252px;
+			height: 130px;
+			margin: 0;
+			padding: 5px 5px;
+			border: 1px solid @green;
 		}
 	}
 }
@@ -283,3 +358,5 @@ footer {
 		}
 	}
 }
+
+

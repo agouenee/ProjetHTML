@@ -132,26 +132,12 @@ section.content aside {
 section.content aside div {
   margin-bottom: 10px;
 }
-section.content aside form {
-  margin-bottom: 10px;
-}
-section.content aside form .bar {
-  border-left: 1px solid #67b013;
-  border-top: 1px solid #67b013;
-  border-bottom: 1px solid #67b013;
-  width: 203px;
-  height: 20px;
-  padding: 1px 5px;
-}
 section.content aside form input[type="submit"] {
-  border: 0;
-  background: url("../images/search-button.png");
-  width: 33px;
-  height: 24px;
   float: right;
   position: relative;
   left: 0px;
   bottom: 24px;
+  background: url("../images/search-button.png");
 }
 section.content aside #citation {
   background: white;
@@ -198,12 +184,98 @@ section.content aside #newsletter form input[type="submit"] {
 /* ---- CATEGORIES ---- */
 section.article {
   width: 625px;
-  height: 220px;
+  height: 241px;
   margin: 25px 0;
   background-color: #FFF;
+  position: relative;
+}
+section.article article .date {
+  width: 47px;
+  height: 45px;
+  background-color: #67b013;
+  color: #FFF;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+section.article article .date .day {
+  font-size: 19px;
+}
+section.article article .date .month {
+  font-size: 15px;
 }
 section.article article h3 {
   font-size: 19px;
+  padding-left: 35px;
+  margin-bottom: 20px;
+}
+/* ---- FORM ---- */
+#contact-form {
+  font-family: 'Droid sans', Arial, sans-serif;
+  color: #656464;
+  font-size: 13px;
+  line-height: 18px;
+  width: 500px;
+}
+#contact-form h2 {
+  padding: 20px 0 20px 100px;
+}
+#contact-form form {
+  width: 300px;
+  margin: auto;
+}
+#contact-form form legend {
+  margin: 10px 0;
+}
+#contact-form form input[type="submit"] {
+  width: 90px;
+  background: white;
+  /*box-shadow: 1px 1px 1px @green;
+			&:hover {
+ 				box-shadow:1px 1px 1px @green inset;
+			}*/
+
+}
+.form {
+  margin-bottom: 10px;
+}
+.form input {
+  border: 1px solid #67b013;
+  width: 203px;
+  height: 20px;
+  padding: 1px 5px;
+}
+.form input[type="submit"] {
+  border: 1px solid #67b013;
+  width: 33px;
+  height: 24px;
+  cursor: pointer;
+}
+.form input[type="reset"] {
+  width: 90px;
+  height: 24px;
+  background: white;
+  cursor: pointer;
+}
+.form p {
+  margin: 15px 0;
+}
+.form p input {
+  width: 250px;
+  height: 25px;
+  padding: 0 5px;
+  border: 1px solid #67b013;
+}
+.form p textarea {
+  font-family: 'Droid sans', Arial, sans-serif;
+  min-width: 252px;
+  max-width: 252px;
+  height: 130px;
+  margin: 0;
+  padding: 5px 5px;
+  border: 1px solid #67b013;
 }
 /* ---- FOOTER ---- */
 footer {

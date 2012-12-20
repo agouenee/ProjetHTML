@@ -5,7 +5,7 @@ $(document).ready(function() {
 		auto: true
 	});
 
-	//Menu
+	// Menu
 	$("header #menu li>a").live({
 		
 			mouseenter: function() {
@@ -40,8 +40,11 @@ $(document).ready(function() {
 		});
 	}, 15000);
 
-	// Placeholder attribute (browsers compatibility)
-	$("input[placeholder]").placeholder();
+	// Placeholder attribute - browsers compatibility (IE)
+	$("input[placeholder], textarea[placeholder]").placeholder();
+	
+	// Fancybox - contact form
+	$('.fancybox').fancybox();
 
 	// Twitter - get last tweets
 	function loadLatestTweet() {
