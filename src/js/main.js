@@ -40,11 +40,48 @@ $(document).ready(function() {
 		});
 	}, 15000);
 
-	// Placeholder attribute - browsers compatibility (IE)
-	$("input[placeholder], textarea[placeholder]").placeholder();
-	
+	// Fake placeholder attribute - IE browser compatibility
+	$("form div.placeholder").each(function() {
+		var label = $(this).find("label");
+		var input = $(this).find("input, textarea");
+		if(input.val() != "") {
+			label.stop().hide();
+		}
+		input.focus(function() {
+			if(input.val() == "") {
+				label.stop().fadeTo(500, 0.5);
+			}
+		});
+		input.blur(function() {
+			if(input.val() == "") {
+				label.stop().fadeTo(500, 1);
+			}
+		});
+		input.keypress(function() {
+			label.stop().hide();
+		});
+		input.keyup(function() {
+			if(input.val() == "") {
+				label.stop().fadeTo(500, 0.5);
+			}
+		});
+		/* Reset button */
+		$("#contact-form form div input.reset").click(function() {
+			label.stop().fadeTo(500, 1);
+		});
+	});
+
 	// Fancybox - contact form
-	$('.fancybox').fancybox();
+	$('.fancybox').fancybox({
+		padding: 0,
+		openEffect : 'fade',
+		openSpeed  : 500,
+
+		closeEffect : 'fade',
+		closeSpeed  : 200,
+
+		closeClick : false
+    });
 
 	// Twitter - get last tweets
 	function loadLatestTweet() {
