@@ -181,10 +181,9 @@ section.content aside #newsletter form {
 section.content aside #newsletter form input[type="submit"] {
   background: url("../images/ok-button.png");
 }
-/* ---- CATEGORIES ---- */
+/* ---- ARTICLES ---- */
 section.article {
   width: 625px;
-  height: 241px;
   margin: 25px 0;
   background-color: #FFF;
   position: relative;
@@ -210,6 +209,9 @@ section.article article h3 {
   font-size: 19px;
   padding-left: 35px;
   margin-bottom: 20px;
+}
+section.article article .extract {
+  padding-bottom: 30px;
 }
 /* ---- FORM ---- */
 #contact-form {
