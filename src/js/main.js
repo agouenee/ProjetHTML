@@ -22,6 +22,40 @@ $(document).ready(function() {
 			}
 	});
 
+	// Displaying articles (JSON & AJAX)
+	$.ajax({
+		url: "ajax/article.json.txt",
+		success: function(data) {
+			var json = eval(data);
+			/**** Displaying article's extracts of each category (webdesign, jquery, php, html5&css3 ****/
+			$.each(json, function(index, article) {
+				if(article.category == "webdesign") {
+					$("#article-webdesign").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
+				}
+				if(article.category == "jquery") {
+					$("#article-jquery").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p class='extract'>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
+				}
+			});
+			/**** Displaying only one article ("Lire la suite") ****/
+			$("#article-webdesign section.content article.article p a").click(function() {
+				var id = $(this).attr("id");
+				$.each(json, function(index, article) {
+					if(article.category == "webdesign" && article.id == id) {
+						$("#article-webdesign").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
+					}
+				});
+			});
+			$("#article-jquery section.content article.article p a").click(function() {
+				var id = $(this).attr("id");
+				$.each(json, function(index, article) {
+					if(article.category == "jquery" && article.id == id) {
+						$("#article-jquery").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
+					}
+				});
+			});
+		}
+	});
+
 	// Citations
 	var citation = $("#citation-content div:first-child");
 	var length = $('#citation-content > div').length;
@@ -65,7 +99,7 @@ $(document).ready(function() {
 				label.stop().fadeTo(500, 0.5);
 			}
 		});
-		/* Reset button */
+		// Reset button
 		$("#contact-form form div input.reset").click(function() {
 			label.stop().fadeTo(500, 1);
 		});

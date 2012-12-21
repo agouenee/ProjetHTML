@@ -212,6 +212,12 @@ section.article {
   background-color: #FFF;
   position: relative;
 }
+section.article article {
+  /*.extract {
+				padding-bottom: 30px;
+			}*/
+
+}
 section.article article .date {
   width: 47px;
   height: 45px;
@@ -234,8 +240,11 @@ section.article article h3 {
   padding-left: 35px;
   margin-bottom: 20px;
 }
-section.article article .extract {
-  padding-bottom: 30px;
+section.article article p {
+  min-height: 150px;
+}
+section.article article img {
+  margin-bottom: 6px;
 }
 /* ---- FORMS ---- */
 section#contact-form {
@@ -274,6 +283,13 @@ section#contact-form form .placeholder.textarea textarea {
   height: 144px;
   padding: 6px 0 0 5px;
   border: 1px solid #67b013;
+  /*&:focus {
+						  border-color: rgba(103, 176, 19, 0.9); 
+						  -moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
+						  -webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
+						  box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
+						}*/
+
 }
 section#contact-form form .placeholder input {
   width: 300px;
@@ -284,6 +300,13 @@ section#contact-form form .placeholder input {
   position: relative;
   left: 0;
   top: 0;
+  /*&:focus {
+					  border-color: rgba(103, 176, 19, 0.9); 
+					  -moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
+					  -webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
+					  box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
+					}*/
+
 }
 section#contact-form form .placeholder label {
   display: block;
@@ -322,6 +345,13 @@ section aside .bar .placeholder input {
   position: relative;
   left: 0;
   top: 0;
+  /*&:focus {
+						border-color: rgba(103, 176, 19, 0.9); 
+						-moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
+						-webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
+						box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
+					}*/
+
 }
 section aside .bar .placeholder label {
   display: block;
