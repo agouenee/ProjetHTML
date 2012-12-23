@@ -21,6 +21,16 @@ body {
 strong {
   font-weight: 700;
 }
+/* ---- BACK TO TOP ---- */
+#back-to-top {
+  width: 49px;
+  height: 49px;
+  background: url("../images/top_button.png");
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
 /* ---- HEADER ---- */
 header {
   width: 900px;
@@ -246,7 +256,7 @@ section.article article p {
 section.article article img {
   margin-bottom: 6px;
 }
-/* ---- FORMS ---- */
+/* ---- FORM ---- */
 section#contact-form {
   display: none;
   font-family: 'Droid sans', Arial, sans-serif;
