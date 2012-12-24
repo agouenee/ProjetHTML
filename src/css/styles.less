@@ -38,13 +38,19 @@ strong {
 
 /* ---- BACK TO TOP ---- */
 #back-to-top {
-	width: 49px;
-	height: 49px;
-	background: url("../images/top_button.png");
 	position: fixed;
 	bottom: 15px;
 	right: 15px;
-	cursor: pointer;
+	a {
+		display: block;
+		width: 49px;
+		height: 49px;
+		background: url("../images/top-button.png") no-repeat;
+		background-position: 0px 0px;
+		&:hover {
+			background-position: 0px -49px;
+		}
+	}
 }
 
 /* ---- HEADER ---- */

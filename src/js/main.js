@@ -23,20 +23,21 @@ $(document).ready(function() {
 	});
 
 	// Scroll - Back to top
-	$("#back-to-top").hide();
+	$("#back-to-top a").hide();
 
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 200) {
-			$("#back-to-top").fadeIn();
+			$("#back-to-top a").fadeIn();
 		} 
 		else {
-			$("#back-to-top").fadeOut();
+			$("#back-to-top a").fadeOut();
 		}
 	});
-	$("#back-to-top").click(function () {
+	$("#back-to-top a").click(function () {
 		$("body,html").animate({
 			scrollTop: 0
 		}, 800);
+		return false;
 	});
 
 	// Displaying articles (JSON & AJAX)
