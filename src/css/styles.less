@@ -126,9 +126,9 @@ section {
 		line-height: 18px;
 		width: 900px;
 		margin: auto;
-		.about {
+		#about {
 			width: 625px;
-			height: 220px;
+			height: 237px; /*220*/
 			background-color: #FFF;
 			margin: 25px 0;
 		}
@@ -157,7 +157,6 @@ section {
 				font-size: 14px;
 			}
 		}
-		
 	}
 }
 
@@ -221,10 +220,10 @@ section {
 			}
 			#newsletter {
 				background: white;
-				height: 75px;
+				height: 95px; /*75*/
 				h3 {
 					font-weight: 700;
-					padding: 15px 15px 3px 15px;
+					padding: 21px 15px 8px 15px;
 				}
 				form {
 					padding: 0 15px 15px 15px;
@@ -233,6 +232,13 @@ section {
 						input {
 							width: 201px;
 							height: 20px;
+						}
+						span.error {
+							position: absolute;
+							display: block;
+							padding: 3px;
+							color: #de1b1b;
+							font-size: 12px; 
 						}
 					}
 					input[type="submit"] {
@@ -315,7 +321,7 @@ section {
 			padding: 20px 0 30px 0;
 			margin: auto;
 			.placeholder {
-				margin-bottom: 15px;
+				margin-bottom: 30px;
 				width: 305px;
 				position: relative;
 				background: white;
@@ -327,12 +333,6 @@ section {
 						height: 144px;
 						padding: 6px 0 0 5px;
 						border: 1px solid @green;
-						/*&:focus {
-						  border-color: rgba(103, 176, 19, 0.9); 
-						  -moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						  -webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						  box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-						}*/
 					}
 				}
 				input {
@@ -343,18 +343,19 @@ section {
 					background: transparent;
 					position: relative;
 					left: 0; top: 0;
-					/*&:focus {
-					  border-color: rgba(103, 176, 19, 0.9); 
-					  -moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-					  -webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-					  box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-					}*/
 				}
 				label {
 					display: block;
 					position: absolute;
 					left: 6px; top: 8px;
 					color: @grey;
+				}
+				span.error {
+					position: absolute; 
+					display: block; 
+					padding: 3px; 
+					color: #de1b1b; 
+					font-size: 12px; 
 				}
 			}
 			input[type="submit"], input[type="reset"] {
