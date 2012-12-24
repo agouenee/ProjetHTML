@@ -39,12 +39,12 @@ $(document).ready(function() {
 		}, 800);
 	});
 
-	// Displaying articles (JSON & AJAX)
+	// Articles (JSON & AJAX)
 	$.ajax({
 		url: "ajax/article.json.txt",
 		success: function(data) {
 			var json = eval(data);
-			/**** Displaying article's extracts of each category (webdesign, jquery, php, html5&css3 ****/
+			// Displaying article's extracts of each category (webdesign, jquery, php, html5&css3
 			$.each(json, function(index, article) {
 				if(article.category == "webdesign") {
 					$("#article-webdesign").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
@@ -53,18 +53,13 @@ $(document).ready(function() {
 					$("#article-jquery").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p class='extract'>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
 				}
 			});
-			/**** Displaying only one article ("Lire la suite") ****/
-			$("#article-webdesign section.content article.article p a").click(function() {
+			// Displaying only one article ("Lire la suite")
+			$("section.content article.article p a").click(function() {
 				var id = $(this).attr("id");
 				$.each(json, function(index, article) {
 					if(article.category == "webdesign" && article.id == id) {
 						$("#article-webdesign").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
 					}
-				});
-			});
-			$("#article-jquery section.content article.article p a").click(function() {
-				var id = $(this).attr("id");
-				$.each(json, function(index, article) {
 					if(article.category == "jquery" && article.id == id) {
 						$("#article-jquery").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
 					}
@@ -72,6 +67,42 @@ $(document).ready(function() {
 			});
 		}
 	});
+
+	// Search result(s) (JSON & AJAX)
+	/*$.ajax({
+		url: "ajax/article.json.txt",
+		success: function(data) {
+			var json = eval(data);
+			// Research articles (search bar)
+			$("form").submit(function() {
+				var tag = $("form input[name='search']").val();
+				//$("#search-result").html("<h3>Résultat de la recherche</h3>");
+				$.each(json, function(index, article) {
+					if(article.tags == tag) {
+						// Hide sections 
+						$("section.slider").addClass("hidden");
+						$("section.about").addClass("hidden");
+						$("section.last-articles").addClass("hidden");
+						$("#article-webdesign").addClass("hidden");
+						$("#article-jquery").addClass("hidden");
+						// Append search result(s)
+						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
+					}
+				});
+				return false;
+			});*/
+			// Displaying only one article ("Lire la suite")
+			/*$("section.content article.article p a").click(function() {
+				//alert("Hey!");
+				var id = $(this).attr("id");
+				$.each(json, function(index, article) {
+					if(article.category == "webdesign" && article.id == id) {
+						$("section.content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
+					}
+				});
+			});*/
+		/*}
+	});*/
 
 	// Citations
 	var citation = $("#citation-content div:first-child");
@@ -133,6 +164,10 @@ $(document).ready(function() {
 
 		closeClick : false
     });
+
+    // Form validation
+    $("#contact-form form").validate();
+    $("#newsletter form").validate();
 
 	// Twitter - get last tweets
 	function loadLatestTweet() {

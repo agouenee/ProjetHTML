@@ -104,9 +104,11 @@ section.content {
   width: 900px;
   margin: auto;
 }
-section.content .about {
+section.content #about {
   width: 625px;
-  height: 220px;
+  height: 237px;
+  /*220*/
+
   background-color: #FFF;
   margin: 25px 0;
 }
@@ -190,11 +192,13 @@ section.content aside #citation #citation-content div .green {
 }
 section.content aside #newsletter {
   background: white;
-  height: 75px;
+  height: 95px;
+  /*75*/
+
 }
 section.content aside #newsletter h3 {
   font-weight: 700;
-  padding: 15px 15px 3px 15px;
+  padding: 21px 15px 8px 15px;
 }
 section.content aside #newsletter form {
   padding: 0 15px 15px 15px;
@@ -205,6 +209,13 @@ section.content aside #newsletter form .placeholder {
 section.content aside #newsletter form .placeholder input {
   width: 201px;
   height: 20px;
+}
+section.content aside #newsletter form .placeholder span.error {
+  position: absolute;
+  display: block;
+  padding: 3px;
+  color: #de1b1b;
+  font-size: 12px;
 }
 section.content aside #newsletter form input[type="submit"] {
   width: 33px;
@@ -279,7 +290,7 @@ section#contact-form form {
   margin: auto;
 }
 section#contact-form form .placeholder {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   width: 305px;
   position: relative;
   background: white;
@@ -293,13 +304,6 @@ section#contact-form form .placeholder.textarea textarea {
   height: 144px;
   padding: 6px 0 0 5px;
   border: 1px solid #67b013;
-  /*&:focus {
-						  border-color: rgba(103, 176, 19, 0.9); 
-						  -moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						  -webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						  box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-						}*/
-
 }
 section#contact-form form .placeholder input {
   width: 300px;
@@ -310,13 +314,6 @@ section#contact-form form .placeholder input {
   position: relative;
   left: 0;
   top: 0;
-  /*&:focus {
-					  border-color: rgba(103, 176, 19, 0.9); 
-					  -moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-					  -webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-					  box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-					}*/
-
 }
 section#contact-form form .placeholder label {
   display: block;
@@ -324,6 +321,13 @@ section#contact-form form .placeholder label {
   left: 6px;
   top: 8px;
   color: #656464;
+}
+section#contact-form form .placeholder span.error {
+  position: absolute;
+  display: block;
+  padding: 3px;
+  color: #de1b1b;
+  font-size: 12px;
 }
 section#contact-form form input[type="submit"],
 section#contact-form form input[type="reset"] {
