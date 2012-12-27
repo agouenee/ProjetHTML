@@ -66,6 +66,17 @@ $(document).ready(function() {
 					}
 				});
 			});
+			// Displaying last articles
+			$.each(json, function(index, article) {
+				if(article.last_article == true) {
+					if(article.id % 2 == 0) {
+						$("#last-articles div").append("<article><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</article></section>");
+					}
+					else {
+						$("#last-articles").append("<article><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</article></section>");
+					}
+				}
+			});
 		}
 	});
 
@@ -123,6 +134,10 @@ $(document).ready(function() {
 		});
 	}, 15000);
 
+ 	// Form validation
+    $("#contact-form form").validate();
+    $("#newsletter form").validate();
+
 	// Fake placeholder attribute - IE browser compatibility
 	$("form div.placeholder").each(function() {
 		var label = $(this).find("label");
@@ -151,6 +166,8 @@ $(document).ready(function() {
 		// Reset button
 		$("#contact-form form div input.reset").click(function() {
 			label.stop().fadeTo(500, 1);
+			// Hide error messages
+			$("#contact-form form span.error").css("display", "none");
 		});
 	});
 
@@ -165,10 +182,6 @@ $(document).ready(function() {
 
 		closeClick : false
     });
-
-    // Form validation
-    $("#contact-form form").validate();
-    $("#newsletter form").validate();
 
 	// Twitter - get last tweets
 	function loadLatestTweet() {

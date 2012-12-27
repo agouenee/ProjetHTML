@@ -1,7 +1,9 @@
 [
+/* Nb total d'articles : 8 */
+
 /* ---- WEBDESIGN---- */
 {
-	"id":"5",
+	"id":"8",
 	"category": "webdesign",
 	"title":"L'article de la fin du monde",
 	"day":"21",
@@ -9,11 +11,13 @@
 	"author":"Un survivant",
 	"image":"fin-du-monde.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"mayas"
+	"tags":"mayas",
+	"last_article":true
 },
 {
-	"id":"4",
+	"id":"7",
 	"category": "webdesign",
 	"title":"Faire des cupcakes design",
 	"day":"04",
@@ -21,11 +25,13 @@
 	"author":"Johnny Hallyday",
 	"image":"article-img.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"cupcake"
+	"tags":"cupcake",
+	"last_article":true
 },
 {
-	"id":"3",
+	"id":"6",
 	"category": "webdesign",
 	"title":"Lorem Ipsum 2",
 	"day":"03",
@@ -33,11 +39,13 @@
 	"author":"Johnny Hallyday",
 	"image":"article-img.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"mayas"
+	"tags":"mayas",
+	"last_article":false
 },
 {
-	"id":"2",
+	"id":"5",
 	"category": "webdesign",
 	"title":"Lorem Ipsum 3",
 	"day":"02",
@@ -45,11 +53,13 @@
 	"author":"Johnny Hallyday",
 	"image":"article-img.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"chocolate"
+	"tags":"chocolate",
+	"last_article":false
 },
 {
-	"id":"1",
+	"id":"4",
 	"category": "webdesign",
 	"title":"Lorem Ipsum 4",
 	"day":"01",
@@ -57,8 +67,10 @@
 	"author":"Johnny Hallyday",
 	"image":"article-img.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"chocolate"
+	"tags":"chocolate",
+	"last_article":false
 },
 
 /* ---- JQUERY---- */
@@ -71,20 +83,24 @@
 	"author":"Un fan de super kiwi",
 	"image":"super-kiwi.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"mayas"
+	"tags":"mayas",
+	"last_article":true
 },
 {
 	"id":"2",
 	"category": "jquery",
 	"title":"Animer ses cupcakes avec jQuery",
-	"day":"04",
+	"day":"05",
 	"month":"dec",
 	"author":"Johnny Hallyday",
 	"image":"article-img.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"cupcake"
+	"tags":"cupcake",
+	"last_article":true
 },
 {
 	"id":"1",
@@ -95,7 +111,9 @@
 	"author":"Johnny Hallyday",
 	"image":"article-img.png",
 	"extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah.",
+	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
-	"tags":"chocolate"
+	"tags":"chocolate",
+	"last_article":false
 }
 ]
