@@ -112,20 +112,20 @@ section.content {
 }
 section.content #about {
   width: 625px;
-  height: 237px;
+  height: 238px;
   /*220*/
 
   background-color: #FFF;
   margin: 25px 0;
 }
-section.content .last-articles {
+section.content #last-articles {
   background-color: #FFF;
   margin: 25px auto;
 }
-section.content .last-articles article {
+section.content #last-articles article {
   width: 400px;
 }
-section.content .last-articles div {
+section.content #last-articles div {
   float: right;
 }
 section.content h2 {
@@ -152,7 +152,7 @@ section.content aside div {
   margin-bottom: 10px;
 }
 section.content aside form .placeholder {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   width: 215px;
 }
 section.content aside form .placeholder input {
@@ -167,6 +167,9 @@ section.content aside form input[type="submit"] {
   background: url("../images/search-button.png");
   border: 1px solid #67b013;
   cursor: pointer;
+}
+section.content aside form input[type="submit"]:hover {
+  background: url("../images/search-button-hover.png");
 }
 section.content aside #citation {
   background: white;
@@ -231,6 +234,9 @@ section.content aside #newsletter form input[type="submit"] {
   background: url("../images/ok-button.png");
   border: 1px solid #67b013;
   cursor: pointer;
+}
+section.content aside #newsletter form input[type="submit"]:hover {
+  background: url("../images/ok-button-hover.png");
 }
 /* ---- ARTICLES ---- */
 section.article {
@@ -365,13 +371,6 @@ section aside .bar .placeholder input {
   position: relative;
   left: 0;
   top: 0;
-  /*&:focus {
-						border-color: rgba(103, 176, 19, 0.9); 
-						-moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						-webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-					}*/
-
 }
 section aside .bar .placeholder label {
   display: block;

@@ -128,11 +128,11 @@ section {
 		margin: auto;
 		#about {
 			width: 625px;
-			height: 237px; /*220*/
+			height: 238px; /*220*/
 			background-color: #FFF;
 			margin: 25px 0;
 		}
-		.last-articles {
+		#last-articles {
 			background-color: #FFF;
 			margin: 25px auto;
 			article {
@@ -171,7 +171,7 @@ section {
 			}
 			form {
 				.placeholder {
-					margin-bottom: 10px;
+					margin-bottom: 9px;
 					width: 215px;
 					input {
 						width: 233px;
@@ -186,6 +186,9 @@ section {
 					background: url("../images/search-button.png");
 					border: 1px solid @green;
 					cursor: pointer;
+					&:hover {
+						background: url("../images/search-button-hover.png");
+					}
 				}
 			}
 			#citation {
@@ -249,6 +252,9 @@ section {
 						background: url("../images/ok-button.png");
 						border: 1px solid @green;
 						cursor: pointer;
+						&:hover {
+							background: url("../images/ok-button-hover.png");
+						}
 					}
 				}
 			}
@@ -388,12 +394,6 @@ section {
 					background: transparent;
 					position: relative;
 					left: 0; top: 0;
-					/*&:focus {
-						border-color: rgba(103, 176, 19, 0.9); 
-						-moz-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						-webkit-box-shadow: 0 0 8px rgba(103, 176, 19, 0.8); 
-						box-shadow: 0 0 8px rgba(103, 176, 19, 0.8);
-					}*/
 				}
 				label {
 					display: block;
