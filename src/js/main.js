@@ -45,7 +45,7 @@ $(document).ready(function() {
 		url: "ajax/article.json.txt",
 		success: function(data) {
 			var json = eval(data);
-			// Displaying article's extracts of each category (webdesign, jquery, php, html5&css3
+			// Displaying article's extracts in each category (webdesign, jquery, php, html5&css3
 			$.each(json, function(index, article) {
 				if(article.category == "webdesign") {
 					$("#article-webdesign").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
@@ -54,7 +54,7 @@ $(document).ready(function() {
 					$("#article-jquery").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p class='extract'>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
 				}
 			});
-			// Displaying only one article ("Lire la suite")
+			// Displaying only one article of a category ("Lire la suite")
 			$("section.content article.article p a").click(function() {
 				var id = $(this).attr("id");
 				$.each(json, function(index, article) {
@@ -66,17 +66,35 @@ $(document).ready(function() {
 					}
 				});
 			});
-			// Displaying last articles
+			// Displaying last articles on home page
 			$.each(json, function(index, article) {
 				if(article.last_article == true) {
 					if(article.id % 2 == 0) {
-						$("#last-articles div").append("<article><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</article></section>");
+						$("#last-articles div").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</a></article></section>");
 					}
 					else {
-						$("#last-articles").append("<article><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</article></section>");
+						$("#last-articles").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</a></article></section>");
 					}
 				}
 			});
+			// Displaying only one last article on home page
+			$("#last-articles article a").click(function() {
+				var id = $(this).attr("id");
+				$(".slider").addClass("hidden");
+				$("#about").addClass("hidden");
+				$("#last-articles").addClass("hidden");
+				$.each(json, function(index, article) {
+					if(article.category == "webdesign" && article.id == id) {
+						$("header #menu #webdesign a").addClass("active");
+						$("#last-article-content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
+					}
+					if(article.category == "jquery" && article.id == id) {
+						$("header #menu #jquery a").addClass("active");
+						$("#last-article-content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
+					}
+				});
+			});
+
 		}
 	});
 

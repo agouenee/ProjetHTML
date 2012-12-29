@@ -125,6 +125,16 @@ section.content #last-articles {
 section.content #last-articles article {
   width: 400px;
 }
+section.content #last-articles article a {
+  text-decoration: none;
+  color: #656464;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+}
+section.content #last-articles article a:hover {
+  color: #67b013;
+}
 section.content #last-articles div {
   float: right;
 }
