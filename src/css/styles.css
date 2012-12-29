@@ -113,8 +113,6 @@ section.content {
 section.content #about {
   width: 625px;
   height: 238px;
-  /*220*/
-
   background-color: #FFF;
   margin: 25px 0;
 }
@@ -212,8 +210,6 @@ section.content aside #citation #citation-content div .green {
 section.content aside #newsletter {
   background: white;
   height: 95px;
-  /*75*/
-
 }
 section.content aside #newsletter h3 {
   font-weight: 700;
@@ -255,12 +251,6 @@ section.article {
   background-color: #FFF;
   position: relative;
 }
-section.article article {
-  /*.extract {
-				padding-bottom: 30px;
-			}*/
-
-}
 section.article article .date {
   width: 47px;
   height: 45px;
@@ -285,6 +275,10 @@ section.article article h3 {
 }
 section.article article p {
   min-height: 150px;
+}
+section.article article p span {
+  margin-left: 10px;
+  float: right;
 }
 section.article article img {
   margin-bottom: 6px;

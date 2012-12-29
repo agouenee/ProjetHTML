@@ -42,31 +42,10 @@ $(document).ready(function() {
 
 	// Articles (JSON & AJAX)
 	$.ajax({
-		url: "ajax/article.json.txt",
+		url: "ajax/articles.json.txt",
 		success: function(data) {
 			var json = eval(data);
-			// Displaying article's extracts in each category (webdesign, jquery, php, html5&css3
-			$.each(json, function(index, article) {
-				if(article.category == "webdesign") {
-					$("#article-webdesign").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
-				}
-				if(article.category == "jquery") {
-					$("#article-jquery").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p class='extract'>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
-				}
-			});
-			// Displaying only one article of a category ("Lire la suite")
-			$("section.content article.article p a").click(function() {
-				var id = $(this).attr("id");
-				$.each(json, function(index, article) {
-					if(article.category == "webdesign" && article.id == id) {
-						$("#article-webdesign").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
-					}
-					if(article.category == "jquery" && article.id == id) {
-						$("#article-jquery").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
-					}
-				});
-			});
-			// Displaying last articles on home page
+			// Displaying last article's extracts on home page
 			$.each(json, function(index, article) {
 				if(article.last_article == true) {
 					if(article.id % 2 == 0) {
@@ -77,62 +56,68 @@ $(document).ready(function() {
 					}
 				}
 			});
-			// Displaying only one last article on home page
-			$("#last-articles article a").click(function() {
+			// Displaying article's extracts in each category (webdesign, jquery, php, html5&css3)
+			$.each(json, function(index, article) {
+				if(article.category == "webdesign") {
+					$("#articles-webdesign").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
+				}
+				if(article.category == "jquery") {
+					$("#articles-jquery").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p class='extract'>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
+				}
+			});
+			// Displaying only one article
+			$("section article a").click(function() {
 				var id = $(this).attr("id");
-				$(".slider").addClass("hidden");
-				$("#about").addClass("hidden");
-				$("#last-articles").addClass("hidden");
 				$.each(json, function(index, article) {
-					if(article.category == "webdesign" && article.id == id) {
-						$("header #menu #webdesign a").addClass("active");
-						$("#last-article-content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
-					}
-					if(article.category == "jquery" && article.id == id) {
-						$("header #menu #jquery a").addClass("active");
-						$("#last-article-content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
+					if(article.id == id) {
+						// Hide sections
+						$(".slider").addClass("hidden");
+						$("#about").addClass("hidden");
+						$("#last-articles").addClass("hidden");
+						$("#articles-"+article.category).addClass("hidden");
+						$("header #menu #"+article.category+" a").addClass("active");
+						// Display article
+						$("#article-content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
 					}
 				});
 			});
-
-		}
-	});
-
-	// Search result(s) (JSON & AJAX)
-	/*$.ajax({
-		url: "ajax/article.json.txt",
-		success: function(data) {
-			var json = eval(data);
-			// Research articles (search bar)
+			// Displaying search result(s)
 			$("form").submit(function() {
+				$("#search-result").html("");
 				var tag = $("form input[name='search']").val();
-				//$("#search-result").html("<h3>Résultat de la recherche</h3>");
 				$.each(json, function(index, article) {
 					if(article.tags == tag) {
 						// Hide sections 
-						$("section.slider").addClass("hidden");
-						$("section.about").addClass("hidden");
-						$("section.last-articles").addClass("hidden");
-						$("#article-webdesign").addClass("hidden");
-						$("#article-jquery").addClass("hidden");
+						$(".slider").addClass("hidden");
+						$("#about").addClass("hidden");
+						$("#last-articles").addClass("hidden");
+						$("#article-content").addClass("hidden");
+						$("#articles-"+article.category).addClass("hidden");
 						// Append search result(s)
-						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a></p></article></section>");
+						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
 					}
+				});
+				// Displaying only one article of the research
+				$("#search-result article a").click(function() {
+					var id = $(this).attr("id");
+					$.each(json, function(index, article) {
+						if(article.id == id) {
+							// Hide sections
+							$("#search-result").html("");
+							$("#article-content").removeClass("hidden");
+							$("#articles-"+article.category).addClass("hidden");
+							// Put class active on article's category in menu
+							$("header #menu a").removeClass("active");
+							$("header #menu #"+article.category+" a").addClass("active");
+							// Display article
+							$("#article-content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
+						}
+					});
 				});
 				return false;
-			});*/
-			// Displaying only one article ("Lire la suite")
-			/*$("section.content article.article p a").click(function() {
-				//alert("Hey!");
-				var id = $(this).attr("id");
-				$.each(json, function(index, article) {
-					if(article.category == "webdesign" && article.id == id) {
-						$("section.content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
-					}
-				});
-			});*/
-		/*}
-	});*/
+			});
+		}
+	});
 
 	// Citations
 	var citation = $("#citation-content div:first-child");
