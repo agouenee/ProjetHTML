@@ -58,6 +58,9 @@ header #title .blog-title {
   top: 30px;
   left: 15px;
 }
+header #title a {
+  text-decoration: none;
+}
 header #menu {
   font-family: 'Droid sans', Arial, sans-serif;
   font-size: 17px;

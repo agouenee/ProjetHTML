@@ -82,7 +82,7 @@ $(document).ready(function() {
 				});
 			});
 			// Displaying search result(s)
-			$("form").submit(function() {
+			$("#search").submit(function() {
 				$("#search-result").html("");
 				var tag = $("form input[name='search']").val();
 				$.each(json, function(index, article) {
@@ -140,6 +140,15 @@ $(document).ready(function() {
  	// Form validation
     $("#contact-form form").validate();
     $("#newsletter form").validate();
+
+    // Newsletter
+    $("#newsletter form input[type='submit']").click(function() {
+    	if($("#newsletter form input[type='text']").hasClass('valid')) {
+    		alert("Merci votre inscription a la newsletter a bien été prise en compte.");
+    		alert("En fait non vu qu'il n'y à pas de PHP sur ce site mais chut.");
+    	}
+    	return false;
+    });
 
 	// Fake placeholder attribute - IE browser compatibility
 	$("form div.placeholder").each(function() {
