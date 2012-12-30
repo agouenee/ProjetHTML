@@ -83,20 +83,31 @@ $(document).ready(function() {
 			});
 			// Displaying search result(s)
 			$("#search").submit(function() {
+				var results = false;
 				$("#search-result").html("");
+				$("#search-result").removeClass("no-result");
+
+				// Hide sections 
+				$(".slider").addClass("hidden");
+				$("#about").addClass("hidden");
+				$("#last-articles").addClass("hidden");
+				$("#article-content").addClass("hidden");
+				//$("#articles-"+article.category).addClass("hidden")
+
 				var tag = $("form input[name='search']").val();
+
 				$.each(json, function(index, article) {
 					if(article.tags == tag) {
-						// Hide sections 
-						$(".slider").addClass("hidden");
-						$("#about").addClass("hidden");
-						$("#last-articles").addClass("hidden");
-						$("#article-content").addClass("hidden");
-						$("#articles-"+article.category).addClass("hidden");
+						results = true;
 						// Append search result(s)
 						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
 					}
+
 				});
+				if(!results) {
+					$("#search-result").append("<section class='content article'><article>Aucun résultat n'a été trouvé pour votre recherche \""+tag+"\".</article></section>");
+					$("#search-result").addClass("no-result");
+				}
 				// Displaying only one article of the research
 				$("#search-result article a").click(function() {
 					var id = $(this).attr("id");

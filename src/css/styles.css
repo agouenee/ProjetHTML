@@ -21,6 +21,9 @@ body {
 strong {
   font-weight: 700;
 }
+#search-result.no-result {
+  margin-bottom: 200px;
+}
 /* ---- BACK TO TOP ---- */
 #back-to-top {
   position: fixed;
