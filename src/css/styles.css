@@ -305,7 +305,8 @@ section.article article img {
 section #search-result .not-found {
   background: transparent;
   height: 345px;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 25px;
 }
 section #search-result .not-found img {
   width: 150px;
