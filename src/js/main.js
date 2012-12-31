@@ -103,6 +103,7 @@ $(document).ready(function() {
 			$("form").submit(function() {
 				$("#search-result").html("");
 				var tag = $("form input[name='search']").val();
+				var tmp = false;
 				$.each(json, function(index, article) {
 					if(article.tags == tag) {
 						// Hide sections 
@@ -113,6 +114,7 @@ $(document).ready(function() {
 						$("#articles-"+article.category).addClass("hidden");
 						// Append search result(s)
 						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
+						tmp = true;
 					}
 				});
 				// Displaying only one article of the research
@@ -132,6 +134,18 @@ $(document).ready(function() {
 						}
 					});
 				});
+				// If nothing has been found
+				if(tmp == false) {
+					// Hide sections 
+					$(".slider").addClass("hidden");
+					$("#about").addClass("hidden");
+					$("#last-articles").addClass("hidden");
+					$("#article-content").addClass("hidden");
+					$("#articles-webdesign").addClass("hidden");
+					$("#articles-jquery").addClass("hidden");
+					// Display message
+					$("#search-result").html("<section class='content article not-found'><article class='article'><strong class='green'>Super Kiwi</strong> n'a trouvé aucun article correspondant à votre recherche...</article></section>");
+				}
 				return false;
 			});
 		}
