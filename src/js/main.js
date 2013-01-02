@@ -58,13 +58,13 @@ $(document).ready(function() {
 			});
 			// Hover effect on last article's image
 			$("#last-articles article a").hover(
-				function () {
+				function() {
 			    	var figcaption = $(this).children("figcaption");
 					$(figcaption).css("background-color", "#67b013");
 					var p = figcaption.children("p");
 					$(p).css("display", "block");
 			  	}, 
-  				function () {
+  				function() {
     				var figcaption = $(this).children("figcaption");
 					$(figcaption).css("background-color", "transparent");
 					var p = figcaption.children("p");
@@ -101,9 +101,12 @@ $(document).ready(function() {
 
 			// Displaying search result(s)
 			$("aside form#search").submit(function() {
-				$("#search-result").html("");
 				var tag = $("form input[name='search']").val();
 				var res = false;
+				if(tag == "") {
+					return false;
+				}
+				$("#search-result").html("");
 				$.each(json, function(index, article) {
 					if(article.tags == tag) {
 						// Hide sections 
