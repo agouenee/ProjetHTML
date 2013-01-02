@@ -100,7 +100,7 @@ $(document).ready(function() {
 			});
 
 			// Displaying search result(s)
-			$("form").submit(function() {
+			$("aside form#search").submit(function() {
 				$("#search-result").html("");
 				var tag = $("form input[name='search']").val();
 				var res = false;
@@ -135,7 +135,7 @@ $(document).ready(function() {
 					});
 				});
 				// If nothing has been found
-				if(res == false) {
+				if(res == false && tag != "") {
 					// Hide sections 
 					$(".slider").addClass("hidden");
 					$("#about").addClass("hidden");
