@@ -49,13 +49,29 @@ $(document).ready(function() {
 			$.each(json, function(index, article) {
 				if(article.last_article == true) {
 					if(article.id % 2 == 0) {
-						$("#last-articles div").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</a></article></section>");
+						$("#last-articles div").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><figcaption><p><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></p></figcaption><h3>"+article.title+"</h3>"+article.small_extract+"</span></a></article></section>");
 					}
 					else {
-						$("#last-articles").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><h3>"+article.title+"</h3>"+article.small_extract+"</a></article></section>");
+						$("#last-articles").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><figcaption><p><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></p></figcaption><h3>"+article.title+"</h3>"+article.small_extract+"</a></article></section>");
 					}
 				}
 			});
+			// Hover effect on last article's image
+			$("#last-articles article a").hover(
+				function() {
+			    	var figcaption = $(this).children("figcaption");
+					$(figcaption).css("background-color", "#67b013");
+					var p = figcaption.children("p");
+					$(p).css("display", "block");
+			  	}, 
+  				function() {
+    				var figcaption = $(this).children("figcaption");
+					$(figcaption).css("background-color", "transparent");
+					var p = figcaption.children("p");
+					$(p).css("display", "none");
+	  			}
+			);
+
 			// Displaying article's extracts in each category (webdesign, jquery, php, html5&css3)
 			$.each(json, function(index, article) {
 				if(article.category == "webdesign") {
@@ -65,6 +81,7 @@ $(document).ready(function() {
 					$("#articles-jquery").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p class='extract'>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
 				}
 			});
+
 			// Displaying only one article
 			$("section article a").click(function() {
 				var id = $(this).attr("id");
@@ -81,6 +98,7 @@ $(document).ready(function() {
 					}
 				});
 			});
+
 			// Displaying search result(s)
 			$("#search").submit(function() {
 				var results = false;
@@ -95,17 +113,22 @@ $(document).ready(function() {
 				//$("#articles-"+article.category).addClass("hidden")
 
 				var tag = $("form input[name='search']").val();
-
+				if(tag == "") {
+					return false;
+				}
+				
+				$("#search-result").html("");
 				$.each(json, function(index, article) {
 					if(article.tags == tag) {
 						results = true;
 						// Append search result(s)
 						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
+						res = true;
 					}
 
 				});
 				if(!results) {
-					$("#search-result").append("<section class='content article'><article>Aucun résultat n'a été trouvé pour votre recherche \""+tag+"\".</article></section>");
+					$("#search-result").append("<section class='content article'><article><strong class='green'>Super Kiwi</strong> n'a trouvé aucun article correspondant à <strong>&laquo;&nbsp;"+tag+"&nbsp;&raquo;</strong> \""+tag+"\".</article></section>");
 					$("#search-result").addClass("no-result");
 				}
 				// Displaying only one article of the research
@@ -125,7 +148,6 @@ $(document).ready(function() {
 						}
 					});
 				});
-				return false;
 			});
 		}
 	});

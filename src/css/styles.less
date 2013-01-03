@@ -146,11 +146,29 @@ section {
 				a {
 					text-decoration: none;
 					color: @grey;
-					-webkit-transition: color 0.3s ease;
+					/*-webkit-transition: color 0.3s ease;
 					-o-transition: color 0.3s ease;
-					-moz-transition: color 0.3s ease;
+					-moz-transition: color 0.3s ease;*/
 					&:hover {
 						color: @green;
+					}
+				}
+				figcaption {
+					width: 150px;
+					height: 99px;
+					background: transparent;
+					position: absolute;
+					p {
+						color: white;
+						text-align: center;
+						padding: 30px 0px;
+						display: none;
+						span.day {
+							font-size: 22px;
+						}
+						span.month {
+							font-size: 18px;
+						}
 					}
 				}
 			}
@@ -317,6 +335,18 @@ section {
 			}
 			img {
 				margin-bottom: 6px;
+			}
+		}
+	}
+	#search-result {
+		.not-found {
+			background: transparent;
+			height: 345px;
+			font-size: 15px;
+			line-height: 25px;
+			img {
+				width: 150px;
+				margin-top: 200px;
 			}
 		}
 	}
