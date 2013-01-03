@@ -48,11 +48,12 @@ $(document).ready(function() {
 			// Displaying last article's extracts on home page
 			$.each(json, function(index, article) {
 				if(article.last_article == true) {
+					var content = "<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><figcaption><p><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></p></figcaption><h3>"+article.title+"</h3>"+article.small_extract+"</a></article></section>";
 					if(article.id % 2 == 0) {
-						$("#last-articles div").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><figcaption><p><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></p></figcaption><h3>"+article.title+"</h3>"+article.small_extract+"</span></a></article></section>");
+						$("#last-articles div").append(content);
 					}
 					else {
-						$("#last-articles").append("<article><a href='#' id='"+article.id+"'><img src='images/articles/last/"+article.image+"' alt='' /><figcaption><p><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></p></figcaption><h3>"+article.title+"</h3>"+article.small_extract+"</a></article></section>");
+						$("#last-articles").append(content);
 					}
 				}
 			});
@@ -74,12 +75,20 @@ $(document).ready(function() {
 
 			// Displaying article's extracts in each category (webdesign, jquery, php, html5&css3)
 			$.each(json, function(index, article) {
+				var tags = article.tags.split(",");
+				var content = "<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /></p></article></section>";
 				if(article.category == "webdesign") {
-					$("#articles-webdesign").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
+					$("#articles-webdesign").append(content);
 				}
 				if(article.category == "jquery") {
-					$("#articles-jquery").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p class='extract'>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
+					$("#articles-jquery").append(content);
 				}
+				// Displaying tags
+				for(i in tags) {
+					$(".article:last p").append(
+						"<span class='green'>#"+tags[i]+"</span>"
+					);
+				};
 			});
 
 			// Displaying only one article
@@ -101,10 +110,11 @@ $(document).ready(function() {
 
 			// Displaying search result(s)
 			$("#search").submit(function() {
-				var tag = $("form input[name='search']").val();
-				if(tag == "") {
+				var tags = $("form input[name='search']").val();
+				if(tags == "") {
 					return false;
 				}
+				tags = tags.split(" ");
 				var results = false;
 				$("#search-result").html("");
 				$("#search-result").removeClass("no-result");
@@ -117,16 +127,24 @@ $(document).ready(function() {
 				//$("#articles-"+article.category).addClass("hidden")
 				
 				$("#search-result").html("");
-				$.each(json, function(index, article) {
-					if(article.tags == tag) {
-						results = true;
-						// Append search result(s)
-						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
-					}
-
-				});
-				if(!results && tag != "") {
-					$("#search-result").append("<section class='content article'><article><strong class='green'>Super Kiwi</strong> n'a trouvé aucun article correspondant à <strong>&laquo;&nbsp;"+tag+"&nbsp;&raquo;</strong>.</article></section>");
+				for(i in tags) {
+					$.each(json, function(index, article) {
+						var article_tags = article.tags.split(",");
+						for(j in article_tags) {
+							if(article_tags[j] == tags[i]) {
+								results = true;
+								// Append search result(s)
+								$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /></p></article></section>");
+								for(k in article_tags) {
+									$(".article:last p").append("<span class='green'>#"+article_tags[k]+"</span>");
+								}
+								break;
+							}
+						}
+					});
+				}
+				if(!results && tags != "") {
+					$("#search-result").append("<section class='content article'><article><strong class='green'>Super Kiwi</strong> n'a trouvé aucun article correspondant à <strong>&laquo;&nbsp;"+tags+"&nbsp;&raquo;</strong>.</article></section>");
 					$("#search-result").addClass("no-result");
 				}
 				// Displaying only one article of the research
