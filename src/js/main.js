@@ -101,6 +101,10 @@ $(document).ready(function() {
 
 			// Displaying search result(s)
 			$("#search").submit(function() {
+				var tag = $("form input[name='search']").val();
+				if(tag == "") {
+					return false;
+				}
 				var results = false;
 				$("#search-result").html("");
 				$("#search-result").removeClass("no-result");
@@ -111,11 +115,6 @@ $(document).ready(function() {
 				$("#last-articles").addClass("hidden");
 				$("#article-content").addClass("hidden");
 				//$("#articles-"+article.category).addClass("hidden")
-
-				var tag = $("form input[name='search']").val();
-				if(tag == "") {
-					return false;
-				}
 				
 				$("#search-result").html("");
 				$.each(json, function(index, article) {
@@ -123,12 +122,11 @@ $(document).ready(function() {
 						results = true;
 						// Append search result(s)
 						$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /><span class='green'>#"+article.tags+"</span><span class='green'>#"+article.category+"</span></p></article></section>");
-						res = true;
 					}
 
 				});
-				if(!results) {
-					$("#search-result").append("<section class='content article'><article><strong class='green'>Super Kiwi</strong> n'a trouvé aucun article correspondant à <strong>&laquo;&nbsp;"+tag+"&nbsp;&raquo;</strong> \""+tag+"\".</article></section>");
+				if(!results && tag != "") {
+					$("#search-result").append("<section class='content article'><article><strong class='green'>Super Kiwi</strong> n'a trouvé aucun article correspondant à <strong>&laquo;&nbsp;"+tag+"&nbsp;&raquo;</strong>.</article></section>");
 					$("#search-result").addClass("no-result");
 				}
 				// Displaying only one article of the research
@@ -148,6 +146,7 @@ $(document).ready(function() {
 						}
 					});
 				});
+			return false;
 			});
 		}
 	});
