@@ -59,17 +59,17 @@ $(document).ready(function() {
 			// Hover effect on last article's image
 			$("#last-articles article a").hover(
 				function() {
-			    	var figcaption = $(this).children("figcaption");
+					var figcaption = $(this).children("figcaption");
 					$(figcaption).css("background-color", "#67b013");
 					var p = figcaption.children("p");
 					$(p).css("display", "block");
-			  	}, 
-  				function() {
-    				var figcaption = $(this).children("figcaption");
+				}, 
+				function() {
+					var figcaption = $(this).children("figcaption");
 					$(figcaption).css("background-color", "transparent");
 					var p = figcaption.children("p");
 					$(p).css("display", "none");
-	  			}
+				}
 			);
 
 			// Displaying article's extracts in each category (webdesign, jquery, php, html5&css3)
@@ -170,18 +170,18 @@ $(document).ready(function() {
 		});
 	}, 15000);
 
- 	// Form validation
-    $("#contact-form form").validate();
-    $("#newsletter form").validate();
+	// Form validation
+	$("#contact-form form").validate();
+	$("#newsletter form").validate();
 
-    // Newsletter
-    $("#newsletter form input[type='submit']").click(function() {
-    	if($("#newsletter form input[type='text']").hasClass('valid')) {
-    		alert("Merci votre inscription a la newsletter a bien été prise en compte.");
-    		alert("En fait non vu qu'il n'y à pas de PHP sur ce site mais chut.");
-    	}
-    	return false;
-    });
+	// Newsletter
+	$("#newsletter form input[type='submit']").click(function() {
+		if($("#newsletter form input[type='text']").hasClass('valid')) {
+			alert("Merci votre inscription a la newsletter a bien été prise en compte.");
+			alert("En fait non vu qu'il n'y à pas de PHP sur ce site mais chut.");
+		}
+		return false;
+	});
 
 	// Fake placeholder attribute - IE browser compatibility
 	$("form div.placeholder").each(function() {
@@ -226,7 +226,7 @@ $(document).ready(function() {
 		closeSpeed  : 200,
 
 		closeClick : false
-    });
+	});
 
 	// Twitter - get last tweets
 	function loadLatestTweet() {
