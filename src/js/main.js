@@ -77,12 +77,7 @@ $(document).ready(function() {
 			$.each(json, function(index, article) {
 				var tags = article.tags.split(",");
 				var content = "<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /></p></article></section>";
-				if(article.category == "webdesign") {
-					$("#articles-webdesign").append(content);
-				}
-				if(article.category == "jquery") {
-					$("#articles-jquery").append(content);
-				}
+				$("#articles-"+article.category).append(content);
 				// Displaying tags
 				for(i in tags) {
 					$(".article:last p").append(
@@ -101,6 +96,7 @@ $(document).ready(function() {
 						$("#about").addClass("hidden");
 						$("#last-articles").addClass("hidden");
 						$("#articles-"+article.category).addClass("hidden");
+						// Put class active on article's category in menu
 						$("header #menu #"+article.category+" a").addClass("active");
 						// Display article
 						$("#article-content").html("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/"+article.image+"' alt='' /><p>"+article.text+"<strong>"+article.author+"</strong></p></article></section>");
@@ -111,30 +107,30 @@ $(document).ready(function() {
 			// Displaying search result(s)
 			$("#search").submit(function() {
 				var tags = $("form input[name='search']").val();
+				// If nothing has been entered, block form sending
 				if(tags == "") {
 					return false;
 				}
 				tags = tags.split(" ");
 				var results = false;
+				// Empty "search-result" each search
 				$("#search-result").html("");
 				$("#search-result").removeClass("no-result");
-
-				// Hide sections 
-				$(".slider").addClass("hidden");
-				$("#about").addClass("hidden");
-				$("#last-articles").addClass("hidden");
-				$("#article-content").addClass("hidden");
-				//$("#articles-"+article.category).addClass("hidden")
-				
-				$("#search-result").html("");
 				for(i in tags) {
 					$.each(json, function(index, article) {
+						// Hide sections 
+						$(".slider").addClass("hidden");
+						$("#about").addClass("hidden");
+						$("#last-articles").addClass("hidden");
+						$("#article-content").addClass("hidden");
+						$("#articles-"+article.category).addClass("hidden");
 						var article_tags = article.tags.split(",");
 						for(j in article_tags) {
 							if(article_tags[j] == tags[i]) {
 								results = true;
 								// Append search result(s)
 								$("#search-result").append("<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /></p></article></section>");
+								// Displaying tags
 								for(k in article_tags) {
 									$(".article:last p").append("<span class='green'>#"+article_tags[k]+"</span>");
 								}
@@ -143,6 +139,7 @@ $(document).ready(function() {
 						}
 					});
 				}
+				// If nothing has been found, display no result message
 				if(!results && tags != "") {
 					$("#search-result").append("<section class='content article'><article><strong class='green'>Super Kiwi</strong> n'a trouvé aucun article correspondant à <strong>&laquo;&nbsp;"+tags+"&nbsp;&raquo;</strong>.</article></section>");
 					$("#search-result").addClass("no-result");
@@ -164,7 +161,7 @@ $(document).ready(function() {
 						}
 					});
 				});
-			return false;
+				return false;
 			});
 		}
 	});
