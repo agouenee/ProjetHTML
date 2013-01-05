@@ -176,6 +176,12 @@ section.content article h3 {
   font-weight: bold;
   font-size: 14px;
 }
+section.content article a {
+  color: #656464;
+}
+section.content article a:hover {
+  color: #67b013;
+}
 /* ---- ASIDE ---- */
 section.content aside {
   width: 245px;

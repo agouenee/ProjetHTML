@@ -194,6 +194,7 @@ $(document).ready(function() {
 	// Newsletter
 	$("#newsletter form input[type='submit']").click(function() {
 		if($("#newsletter form input[type='text']").hasClass('valid')) {
+			// La on est censé appeler notre jolie page PHP et ajouter le mail dans notre jolie BDD (s'il n'est pas déjà présent)
 			alert("Merci votre inscription a la newsletter a bien été prise en compte.");
 			alert("En fait non vu qu'il n'y à pas de PHP sur ce site mais chut.");
 		}
