@@ -6,12 +6,12 @@
 	"id":"8",
 	"category": "webdesign",
 	"title":"Designmoo, ressources webdesign",
-	"day":"21",
-	"month":"dec",
+	"day":"07",
+	"month":"jan",
 	"author":"Le kiwi du web",
 	"image":"designmoo.jpg",
 	"extract":"Designmoo est une plateforme communautaire de graphistes et illustrateurs proposant des ressources en WebDesign, logos, puces, icones etc. à télécharger gratuitement. C'est typiquement le genre de plateforme qu'affectionne Super Kiwi: Communautaire, partage et gratuit !",
-	"small_extract":"Designmoo est une plateforme communautaire de graphistes et illustrateurs proposant des ressources en WebDesign, logos, puces, icones etc.",
+	"small_extract":"Designmoo est une plateforme communautaire de graphistes et illustrateurs proposant des ressources...",
 	"text":"Designmoo est une plateforme communautaire de graphistes et illustrateurs proposant des ressources en WebDesign, logos, puces, icones etc. à télécharger gratuitement.<br /><br />C'est typiquement le genre de plateforme qu'affectionne Super Kiwi: Communautaire, partage et gratuit !<br />Designmoo est une véritable mine d'or pour tous les webdesigners, illustrateurs, et développeurs qui souhaitent donner du style à leurs créations, sites web, applications mobiles ...<br />Chaque ressource est téléchargeable directement sans inscription.<br />On peut consulter le nombre de téléchargement, le nombre de personnes qui ont consulté la ressource et le nombre d'utilisateurs qui aiment la ressource.<br /><br /><a href=\"http://designmoo.com/\">Site officiel</a><br /><br />",
 	"tags":"ressources,webdesign",
 	"last_article":true
@@ -20,8 +20,8 @@
 	"id":"7",
 	"category": "webdesign",
 	"title":"Des templates d'email reponsives",
-	"day":"04",
-	"month":"dec",
+	"day":"06",
+	"month":"jan",
 	"author":"Le kiwi du web",
 	"image":"email-responsive.png",
 	"extract":"Voici une collection de templates d'emails HTML reprenant le concept de responsive webdesign pour s'adapter à tous les écrans. Le responsive webdesign s'applique très bien pour les sites web, alors pourquoi ne pas étendre la technique jusqu'aux emails ?",
@@ -86,7 +86,7 @@
 	"small_extract":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop.",
 	"text":"Cupcake ipsum dolor sit amet muffin ice cream muffin. Jelly ice cream lemon drops lollipop. Lollipop donut cheesecake chocolate cake lollipop faworki applicake donut. Lemon drops toffee gummi bears jelly-o sugar plum wafer. Pie jelly pie jelly topping pudding powder gummies jelly. Chocolate bar candy ice cream sweet dragée cotton candy pastry halvah. <br /><br />Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.Cupcake ipsum dolor. Sit amet cookie toffee candy canes croissant chupa chups. Tart pie cheesecake. Cake candy faworki gingerbread applicake gummi bears sesame snaps sweet jelly-o. Tootsie roll chocolate muffin powder. Tiramisu cupcake bonbon gummies. Jelly soufflé jelly oat cake applicake. Gummi bears jelly beans croissant ice cream applicake pie pie muffin. Powder applicake croissant biscuit chocolate bar biscuit. Caramels macaroon wypas icing apple pie.<br /><br />Apple pie biscuit cookie tiramisu tart cheesecake cake sweet macaroon. Faworki tart lemon drops tart macaroon tart. Apple pie cotton candy tart marzipan jujubes dessert.<br /><br />",
 	"tags":"mayas,jquery",
-	"last_article":true
+	"last_article":false
 },
 {
 	"id":"2",
@@ -127,7 +127,7 @@
 	"author":"CommentCaMarche",
 	"image":"elephant-php.png",
 	"extract":"PHP est un langage interprété (un langage de script) exécuté du côté serveur (comme les scripts CGI, ASP) et non du côté client (un script écrit en Javascript ou une applet Java s'exécute sur votre ordinateur). La syntaxe du langage provient de celles du langage C, du Perl et de Java.<br />Ses principaux atouts sont : une grande communauté...",
-	"small_extract":"PHP est un langage interprété (un langage de script) exécuté du côté serveur (comme les scripts CGI, ASP) et non du côté client...",
+	"small_extract":"PHP est un langage interprété (un langage de script) exécuté du côté serveur (comme les scripts CGI, ASP) et non du côté client.",
 	"text":"<h4>Qu'est-ce que PHP ?</h4>PHP est un langage interprété (un langage de script) exécuté du côté serveur (comme les scripts CGI, ASP) et non du côté client (un script écrit en Javascript ou une applet Java s'exécute sur votre ordinateur). La syntaxe du langage provient de celles du langage C, du Perl et de Java.<br />Ses principaux atouts sont :<ul><li>Une grande communauté de développeurs partageant des centaines de milliers d'exemples de script PHP</li><li>La gratuité et la disponibilité du code source (PHP est distribué sous licence GNU GPL)</li><li>La simplicité d'écriture de scripts</li><li>La possibilité d'inclure le script PHP au sein d'une page HTML (contrairement aux scripts CGi, pour lesquels il faut écrire des lignes de code pour afficher chaque ligne en langage HTML)</li><li>La simplicité d'interfaçage avec des bases de données (de nombreux SGBD sont supportés, mais le plus utilisé avec ce langage est MySQL, un SGBD gratuit disponible sur de nombreuses plateformes : Unix, Linux, Windows, MacOs X, Solaris, etc.)</li><li>L'intégration au sein de nombreux serveurs web (Apache, Microsoft IIS, etc.)</li></ul><br /><h4>Origines de PHP</h4>Le langage PHP a été mis au point au début d'automne 1994 par Rasmus Lerdorf. Ce langage de script lui permettait de conserver la trace des utilisateurs venant consulter son CV sur son site, grâce à l'accès à une base de données par l'intermédiaire de requêtes SQL. Ainsi, étant donné que de nombreux internautes lui demandèrent ce programme, Rasmus Lerdorf mit en ligne en 1995 la première version de ce programme qu'il baptisa Personal Sommaire Page Tools, puis Personal Home Page v1.0 (traduisez page personnelle version 1.0).<br /><br />Etant donné le succès de PHP 1.0, Rasmus Lerdorf décida d'améliorer ce langage en y intégrant des structures plus avancées telles que des boucles, des structures conditionnelles, et y intégra un package permettant d'interpréter les formulaires qu'il avait développé (FI, Form Interpreter) ainsi que le support de mSQL. C'est de cette façon que la version 2 du langage, baptisée pour l'occasion PHP/FI version 2, vit le jour durant l'été 1995. Il fut rapidement utilisé sur de nombreux sites (15000 fin 1996, puis 50000 en milieu d'année 1997).<br /><br />A partir de 1997, Zeev Suraski et Andi Gurmans rejoignirent Rasmus pour former une équipe de programmeurs afin de mettre au point PHP 3 (Stig Bakken, Shane Caraveo et Jim Winstead les rejoignirent par la suite). C'est ainsi que la version 3.0 de PHP fut disponible le 6 juin 1998.<br /><br />A la fin de l'année 1999 la version 4.0 de PHP, baptisée PHP4, est apparue. PHP en est aujourd'hui à sa cinquième version.<br /><br /><h4>SGBD supportés par PHP</h4>PHP permet un interfaçage simple avec de nombreux systèmes de gestion de bases de données (SGBD), parmi lesquels :<ul><li>Adabas D</li><li>dBase</li><li>Empress</li><li>FilePro</li><li>Informix</li><li>Interbase</li><li>mSQL</li><li>MySQL</li><li>Oracle</li><li>PostgreSQL</li><li>Solid</li><li>Sybase</li><li>Velocis</li><li>Unix dbm</li></ul><br /><br />",
 	"tags":"lerdorf,rasmus,sgbd,php",
 	"last_article":true
