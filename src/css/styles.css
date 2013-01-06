@@ -22,9 +22,7 @@ strong {
   font-weight: 700;
 }
 #search-result.no-result {
-  margin-bottom: 38%;
-  /* 200px */
-
+  margin-bottom: 25%;
 }
 /* ---- BACK TO TOP ---- */
 #back-to-top {
@@ -279,6 +277,9 @@ section.article {
   margin: 25px 0;
   background-color: #FFF;
   position: relative;
+}
+section.article article.article {
+  min-height: 200px;
 }
 section.article article .date {
   width: 47px;
