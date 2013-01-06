@@ -75,15 +75,17 @@ $(document).ready(function() {
 
 			// Displaying article's extracts in each category (webdesign, jquery, php, html5&css3)
 			$.each(json, function(index, article) {
-				var tags = article.tags.split(",");
-				var content = "<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /></p></article></section>";
-				$("#articles-"+article.category).append(content);
-				// Displaying tags
-				for(i in tags) {
-					$(".article:last p").append(
-						"<span class='green'>#"+tags[i]+"</span>"
-					);
-				};
+				if($("#articles-"+article.category).length != 0) {
+					var tags = article.tags.split(",");
+					var content = "<section class='content article'><article class='article'><div class='date'><span class='day'>"+article.day+"</span><br /><span class='month'>"+article.month+"</span></div><h3>"+article.title+"</h3><img src='images/articles/small/"+article.image+"' alt='' /><p>"+article.extract+"<br /><a href='#' class='green' id='"+article.id+"'>Lire la suite</a><br /><br /></p></article></section>";
+					$("#articles-"+article.category).append(content);
+					// Displaying tags
+					for(i in tags) {
+						$(".article:last p").append(
+							"<span class='green'>#"+tags[i]+"</span>"
+						);
+					};
+				}
 			});
 
 			// Displaying only one article
