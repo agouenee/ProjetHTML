@@ -169,22 +169,22 @@ $(document).ready(function() {
 	});
 
 	// Citations
-	var citation = $("#citation-content div:first-child");
+	var citation = $("#citation-content div:first");
 	var length = $('#citation-content > div').length;
-	var i = 1;
+	var cpt = 1;
 	setInterval(function() {
 		citation.fadeOut("slow", function () {
 			citation.addClass("hidden").fadeOut("slow");
 			citation.next().fadeIn("slow").removeClass("hidden");
 			citation = citation.next();
-			i++;
-			if(i > length) {
-				citation = $("#citation-content div:first-child");
+			cpt++;
+			if(cpt > length) {
+				citation = $("#citation-content div:first");
 				citation.fadeIn("slow").removeClass("hidden");
-				i = 1;
+				cpt = 1;
 			}
 		});
-	}, 15000);
+	}, 5000);
 
 	// Form validation
 	$("#contact-form form").validate();
